@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mira Lavelle — Romance &amp; Gothic Suspense</title>
+<meta name="description" content="Mira Lavelle writes atmospheric, emotionally exact love stories with secrets in the seams. Ink & Inheritance, This Version of Us, and No One's Girl.">
+<link rel="stylesheet" href="../css/site.css">
+</head>
+<body class="world-mira">
+
+<nav>
+  <div class="wrap">
+    <div class="brand">MIRA <b>LAVELLE</b></div>
+    <div class="navlinks">
+      <a href="../index.html">← All Worlds</a>
+      <a href="#books">Books</a>
+      <a href="#about">About</a>
+      <a href="#newsletter">Newsletter</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="stars"></div>
+  <div class="wrap" style="padding:72px 22px 64px;text-align:center">
+    <p class="reyebrow">Romance · Gothic Suspense</p>
+    <h1 class="rtitle" style="font-size:54px">Mira Lavelle</h1>
+    <p class="lead" style="margin-top:18px">Atmospheric, emotionally exact love stories with secrets in the seams — where the romance is real and the past never quite stays buried.</p>
+    <div class="rcta" style="justify-content:center;margin-top:24px"><a class="btn primary" href="#books">Browse the books</a></div>
+  </div>
+</header>
+
+<section id="books">
+  <div class="wrap">
+    <p class="kicker">The Mira Lavelle Shelf</p>
+    <h2>Romance &amp; Gothic Suspense</h2>
+    <div id="shelfgrid" style="margin-top:24px"></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap blurb">
+    <p class="kicker">About Mira Lavelle</p>
+    <h2>The author behind the romance</h2>
+    <p>Mira Lavelle writes love stories you can feel in your chest — formidable heroines, slow-burn tension, and the quiet, dangerous places where memory and desire overlap. Atmosphere you can smell, secrets that cost something, and endings that earn their ache.</p>
+    <p class="turn">For readers of A.S. Byatt, Sarah Penner, and anyone who likes a love story with a locked room in it.</p>
+  </div>
+</section>
+
+<section id="newsletter">
+  <div class="wrap news">
+    <p class="kicker">Romance Only</p>
+    <h2>Get the next Mira Lavelle book</h2>
+    <p style="margin-top:10px">One list, romance only. I'll email you when there's a new Mira Lavelle release.</p>
+    <form onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';">
+      <input type="email" placeholder="your@email.com" required>
+      <button class="btn primary" type="submit">Notify me</button>
+    </form>
+    <p class="ok" style="display:none;color:var(--gold);margin-top:12px">You're on the Mira Lavelle list.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">MIRA LAVELLE · Romance &amp; Gothic Suspense · part of <a href="../index.html">Three Worlds</a></div>
+</footer>
+
+<script>window.ASSET_PREFIX='../';</script>
+<script src="../css/books.js"></script>
+<script>renderShelf('#shelfgrid', {filter:function(b){return b.world==='mira';}});</script>
+</body>
+</html>

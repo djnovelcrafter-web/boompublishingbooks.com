@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900" role="img" aria-label="When I See Through You — a novel by Mira Lavelle">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#e7c987"/>
+      <stop offset="0.42" stop-color="#c79a73"/>
+      <stop offset="0.72" stop-color="#6d6f80"/>
+      <stop offset="1" stop-color="#33455a"/>
+    </linearGradient>
+    <radialGradient id="moon" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fbf3da"/>
+      <stop offset="0.7" stop-color="#f0e2bd"/>
+      <stop offset="1" stop-color="#f0e2bd" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="jade" cx="0.4" cy="0.35" r="0.8">
+      <stop offset="0" stop-color="#5fcf9e"/>
+      <stop offset="0.6" stop-color="#2f8f6a"/>
+      <stop offset="1" stop-color="#16523c"/>
+    </radialGradient>
+    <linearGradient id="field" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b3a4d"/>
+      <stop offset="1" stop-color="#1a2330"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="900" fill="url(#sky)"/>
+
+  <circle cx="430" cy="250" r="150" fill="url(#moon)"/>
+  <circle cx="430" cy="250" r="78" fill="#fdf8e8" opacity="0.9"/>
+
+  <g transform="translate(300 560)">
+    <circle r="116" fill="#16523c" opacity="0.25"/>
+    <path d="M 0 -96 A 96 96 0 0 1 0 96 A 64 96 0 0 0 0 -96 Z" fill="url(#jade)" stroke="#0d3527" stroke-width="3"/>
+    <path d="M -10 -70 A 70 70 0 0 1 -10 70" fill="none" stroke="#9fe6c6" stroke-width="2.5" opacity="0.55"/>
+  </g>
+
+  <path d="M0 760 Q40 700 70 760 Q95 690 120 760 Q150 695 180 760 Q210 700 240 760 Q270 690 300 760 Q330 700 360 760 Q390 690 420 760 Q450 700 480 760 Q510 690 540 760 Q570 705 600 760 L600 900 L0 900 Z" fill="url(#field)"/>
+
+  <g font-family="Georgia, 'Times New Roman', serif" text-anchor="middle">
+    <text x="300" y="120" font-size="58" fill="#fbf6ec" letter-spacing="2" font-weight="bold">WHEN I SEE</text>
+    <text x="300" y="180" font-size="58" fill="#fbf6ec" letter-spacing="2" font-weight="bold">THROUGH YOU</text>
+    <text x="300" y="478" font-size="20" fill="#fdf6e6" font-style="italic" opacity="0.92">Two halves of one stone.</text>
+    <text x="300" y="838" font-size="26" fill="#f2e8d4" letter-spacing="5">MIRA LAVELLE</text>
+    <text x="300" y="868" font-size="13" fill="#e7d9bf" letter-spacing="3" opacity="0.85">A WWII HISTORICAL ROMANCE</text>
+  </g>
+</svg>

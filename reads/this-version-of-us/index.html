@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>This Version of Us &mdash; Mira Lavelle</title>
+<meta name="description" content="This Version of Us by Mira Lavelle - an upmarket romantic magical-realism novel about two doctoral students connected by visions of a life in another world, and the truth that being known is not the same as being loved.">
+<style>
+  :root{
+    --night:#160f22; --night2:#1f1530; --plum:#2e1f47;
+    --violet:#7c52a8; --violetglow:#cdb3e6; --gold:#c79a4e; --goldglow:#ecce97;
+    --dusk:#a25f8e; --paper:#f6f2ec; --muted:#b8acca; --line:rgba(205,179,230,.18);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--night);color:var(--paper);
+       font-family:Georgia,'Iowan Old Style','Palatino Linotype',serif;line-height:1.7;}
+  h1,h2,h3,.brand{font-family:'Cormorant Garamond','Cinzel',Georgia,serif;letter-spacing:.02em;line-height:1.12}
+  a{color:var(--violetglow);text-decoration:none}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:20;background:rgba(22,15,34,.84);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brand{font-size:20px;color:#fff;letter-spacing:.08em}
+  .navlinks a{font-family:Arial,Helvetica,sans-serif;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-left:22px}
+  .navlinks a:hover{color:var(--violetglow)}
+  @media(max-width:680px){.navlinks{display:none}}
+
+  /* hero */
+  header.hero{position:relative;overflow:hidden;
+    background:
+      radial-gradient(120% 80% at 50% 120%, rgba(124,82,168,.30), transparent 60%),
+      linear-gradient(180deg,#160f22 0%, #271a3e 40%, #4a2d6b 64%, #a25f8e 84%, #c79a4e 96%, #2e1f47 100%);}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;padding:70px 22px 84px}
+  @media(max-width:820px){.hero .wrap{grid-template-columns:1fr;text-align:center}}
+  .eyebrow{font-family:Arial,Helvetica,sans-serif;font-size:12.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--violetglow);margin:0 0 14px}
+  .hero h1{font-size:62px;margin:0;color:#fff;font-weight:500;text-shadow:0 3px 30px rgba(124,82,168,.5)}
+  .hero h1 .of{font-style:italic;color:var(--violetglow);font-weight:400}
+  .lede{font-size:19px;color:#efe7da;margin:22px 0 10px;max-width:46ch}
+  @media(max-width:820px){.lede{margin-left:auto;margin-right:auto}}
+  .byline{font-family:'Cormorant Garamond',Georgia,serif;letter-spacing:.14em;font-size:19px;color:var(--goldglow);margin-top:10px}
+  .cta{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+  @media(max-width:820px){.cta{justify-content:center}}
+  .btn{font-family:Arial,Helvetica,sans-serif;font-size:14px;letter-spacing:.08em;text-transform:uppercase;
+       padding:13px 22px;border-radius:40px;display:inline-block;font-weight:700;transition:transform .2s}
+  .btn.primary{background:linear-gradient(90deg,var(--violet),var(--violetglow));color:#1a1226;box-shadow:0 8px 26px rgba(124,82,168,.4)}
+  .btn.ghost{border:1px solid var(--goldglow);color:var(--goldglow)}
+  .btn:hover{transform:translateY(-1px)}
+
+  /* cover card (CSS/SVG rendered) */
+  .coverart{justify-self:center;display:block;width:312px;height:480px;border-radius:8px;position:relative;overflow:hidden;
+            box-shadow:0 26px 70px rgba(0,0,0,.62);border:1px solid rgba(255,255,255,.10)}
+  .coverart svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+  .coverart .ct{position:absolute;left:0;right:0;top:54px;text-align:center;padding:0 22px;z-index:3}
+  .coverart .ct h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:40px;font-weight:500;color:#fff;margin:0;line-height:1.05;text-shadow:0 2px 16px rgba(0,0,0,.5)}
+  .coverart .ct h2 .of{font-style:italic;color:var(--violetglow);font-weight:400}
+  .coverart .ct .sub{font-family:Arial,Helvetica,sans-serif;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--violetglow);margin-top:16px;line-height:1.6}
+  .coverart .au{position:absolute;bottom:26px;left:0;right:0;text-align:center;font-family:'Cormorant Garamond',serif;letter-spacing:.16em;color:#fff;font-size:18px;z-index:3}
+
+  section{padding:70px 0;border-top:1px solid var(--line)}
+  section h2{font-size:32px;color:#fff;margin:0 0 8px;text-align:center;font-weight:500}
+  .kicker{text-align:center;font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:26px}
+  .blurb p{font-size:18px;max-width:760px;margin:0 auto 18px;color:#ece5d8}
+  .blurb .turn{text-align:center;font-style:italic;color:var(--violetglow);font-size:21px;margin-top:26px;line-height:1.5}
+
+  .triad{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:10px}
+  @media(max-width:760px){.triad{grid-template-columns:1fr}}
+  .card{background:linear-gradient(180deg,rgba(46,31,71,.6),rgba(22,15,34,.4));border:1px solid var(--line);
+        border-radius:14px;padding:26px 22px;text-align:center}
+  .card .ic{font-size:30px}
+  .card h3{font-size:23px;color:#fff;margin:12px 0 4px;font-weight:500}
+  .card .role{font-family:Arial,Helvetica,sans-serif;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+  .card p{color:var(--muted);font-size:15.5px;margin:0}
+
+  .themes{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:840px;margin:0 auto}
+  @media(max-width:680px){.themes{grid-template-columns:1fr}}
+  .theme{border-left:2px solid var(--violet);padding:6px 0 6px 18px}
+  .theme h3{font-size:18px;color:var(--violetglow);margin:0 0 4px;font-weight:500}
+  .theme p{margin:0;color:var(--muted);font-size:15px}
+
+  .quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:900px;margin:0 auto}
+  @media(max-width:680px){.quotes{grid-template-columns:1fr}}
+  blockquote{margin:0;background:rgba(124,82,168,.08);border:1px solid var(--line);border-radius:14px;padding:24px;font-size:17px;color:#ece5d8}
+  blockquote .src{display:block;margin-top:12px;font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-style:normal}
+
+  /* sample chapter */
+  #sample{background:linear-gradient(180deg,#1b1329,#160f22)}
+  .reader{max-width:680px;margin:0 auto;background:var(--paper);color:#211c2a;border-radius:14px;
+          padding:54px 52px 40px;box-shadow:0 30px 80px rgba(0,0,0,.5);position:relative}
+  @media(max-width:600px){.reader{padding:38px 26px 30px}}
+  .reader .chap-label{text-align:center;font-family:Arial,Helvetica,sans-serif;letter-spacing:.32em;text-transform:uppercase;font-size:11px;color:var(--gold)}
+  .reader .chap-title{text-align:center;font-family:'Cormorant Garamond',Georgia,serif;font-size:30px;font-weight:500;color:#4a2d6b;margin:.4rem 0 .3rem}
+  .reader .chap-rule{text-align:center;color:var(--violet);margin-bottom:2.1rem;font-size:1.1rem}
+  .reader p{font-size:1.08rem;line-height:1.78;margin:0 0 1.15em;text-align:justify;hyphens:auto}
+  .reader p:first-of-type::first-letter{font-size:3.1rem;line-height:.8;float:left;padding:.06em .09em 0 0;color:var(--violet);font-weight:600}
+  .reader em{color:#3a2f48}
+  hr.scene-break{border:none;text-align:center;margin:2rem 0}
+  hr.scene-break::before{content:"\2042";color:var(--gold);font-size:1.2rem;letter-spacing:.4em}
+  .fade{position:relative;margin-top:-150px;height:150px;background:linear-gradient(180deg,rgba(246,242,236,0),var(--paper));border-radius:0 0 14px 14px}
+  .sample-cta{text-align:center;margin-top:30px}
+  .sample-cta p{color:var(--muted);font-family:Arial,Helvetica,sans-serif;font-size:13px;letter-spacing:.04em;margin-bottom:16px}
+
+  .about{display:grid;grid-template-columns:.4fr .6fr;gap:34px;align-items:center;max-width:880px;margin:0 auto}
+  @media(max-width:680px){.about{grid-template-columns:1fr;text-align:center}}
+  .avatar{width:160px;height:160px;border-radius:50%;justify-self:center;
+          background:radial-gradient(circle at 35% 30%, #6c4a8c, #160f22);border:1px solid var(--line);
+          display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:46px;color:var(--goldglow)}
+  .about p{color:#ece5d8;font-size:16.5px}
+
+  .finalcta{background:linear-gradient(180deg,#1f1530,#2e1f47);text-align:center}
+  .finalcta h2{margin-bottom:18px}
+  footer{padding:30px 0;text-align:center;color:var(--muted);font-family:Arial,Helvetica,sans-serif;font-size:13px;border-top:1px solid var(--line)}
+  .note{max-width:760px;margin:18px auto 0;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#857ea0;text-align:center}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">THIS VERSION OF US</div>
+    <div class="navlinks">
+      <a href="#story">Story</a>
+      <a href="#cast">The Cast</a>
+      <a href="#themes">Themes</a>
+      <a href="#sample">Read Chapter 1</a>
+      <a href="#reviews">Early Readers</a>
+      <a href="#author">Author</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">An Upmarket Romantic Magical-Realism Novel</p>
+      <h1>This Version <span class="of">of</span> Us</h1>
+      <p class="lede">He knows her laugh before he has earned the right to hear it. He knows the lavender at her window, the pendant at her throat &mdash; all from a life that does not exist in this world, except in visions that feel more real than memory.</p>
+      <p class="byline">A novel by MIRA LAVELLE</p>
+      <div class="cta">
+        <a class="btn primary" href="#sample">Read Chapter 1</a>
+        <a class="btn ghost" href="#story">Read the Blurb</a>
+      </div>
+    </div>
+
+    <!-- CSS/SVG rendered cover: rain-window + traced pendant -->
+    <div class="coverart" aria-label="This Version of Us cover"><img src="../../covers/this-version-of-us.png" alt="This Version of Us cover" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+  </div>
+</header>
+
+<section id="story" class="blurb">
+  <div class="wrap">
+    <div class="kicker">The Story</div>
+    <h2>Magic can reveal possibility. It cannot create permission.</h2>
+    <div style="height:18px"></div>
+    <p>Aran MacLeod knows Priya Shah&rsquo;s laugh before he has earned the right to hear it. He knows the lavender at her window, the warmth of her hand, the violet-pewter pendant at her throat &mdash; all from a life that does not exist in this world, except in visions that arrive uninvited and feel more real than memory.</p>
+    <p>Two doctoral students. A rain-soaked campus of seminar rooms and bad fluorescent light. An impossible bond neither of them asked for. For Aran, the visions feel like proof. For Priya, who has already survived one person who decided he knew what was best for her, being known without consent is not romance. It is a door left open in the dark.</p>
+    <p>When Aran lets what he has glimpsed govern what he does, the harm is real &mdash; and so are the consequences. As an abusive mentor and a cruel institution close in on Priya&rsquo;s funding, her visa, her future, Aran must learn the one thing the visions can never teach him: that love is not certainty. It is asking. It is waiting. It is letting the other person choose.</p>
+    <p class="turn">&ldquo;Maybe that world is real. Maybe it is one version of us.<br>But it is not a contract this version of me signed.&rdquo;</p>
+  </div>
+</section>
+
+<section id="cast">
+  <div class="wrap">
+    <div class="kicker">A campus love story with teeth</div>
+    <h2>The Cast</h2>
+    <div style="height:18px"></div>
+    <div class="triad">
+      <div class="card">
+        <div class="ic">&#127783;</div>
+        <h3>Aran MacLeod</h3>
+        <div class="role">The One Who Knows</div>
+        <p>A lonely doctoral student who translates every feeling into weather. The visions hand him a life where Priya already loves him &mdash; and he must learn that knowing things he had no right to know is not the same as being allowed to use them.</p>
+      </div>
+      <div class="card">
+        <div class="ic">&#10086;</div>
+        <h3>Priya Shah</h3>
+        <div class="role">The One Who Chooses</div>
+        <p>An artist who writes in violet ink and refuses to call purple simply purple. Brilliant, guarded, and done being told what is best for her. She will not let magic erase harm, and she defines the terms of anything that comes next.</p>
+      </div>
+      <div class="card">
+        <div class="ic">&#128008;</div>
+        <h3>Violet</h3>
+        <div class="role">The Smallest Ethics Committee</div>
+        <p>A purple-collared cat with a judgmental face and democratic affection. Violet trusts what bodies do, not what they mean. You feed the cat. You keep your hands still. The cat decides.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="themes">
+  <div class="wrap">
+    <div class="kicker">What It&rsquo;s About</div>
+    <h2>Knowing is not permission</h2>
+    <div style="height:24px"></div>
+    <div class="themes">
+      <div class="theme"><h3>Consent over certainty</h3><p>Magical intimacy does not override real-world consent. Love is not being sure of someone. It is asking, waiting, and letting them say no.</p></div>
+      <div class="theme"><h3>Attention as love or acquisition</h3><p>Being seen can be tender or terrifying. The same devotion that feels like care can become a way of taking. Devotion and predation produce identical grammar.</p></div>
+      <div class="theme"><h3>Repair is action, not remorse</h3><p>Feeling sorry changes nothing. Aran must change in behavior, not merely in feeling &mdash; and accept consequences without asking to be forgiven for them.</p></div>
+      <div class="theme"><h3>Institutions that weaponize care</h3><p>An abusive mentor and a polite bureaucracy speak the language of support, stability, and concern &mdash; the same certainty that believes it knows what is best for a woman.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="sample">
+  <div class="wrap">
+    <div class="kicker">A Taste of the Book</div>
+    <h2>Read Chapter One</h2>
+    <div style="height:30px"></div>
+    <div class="reader">
+      <div class="chap-label">Chapter One</div>
+      <div class="chap-title">The Purple Scarf</div>
+      <div class="chap-rule">&#10086;</div>
+      <p>The first impossible thing was not the vision. It was the color.</p>
+<p>The window was fogged at the edges, and I had been standing at it long enough to draw a small circle in the condensation with one finger without noticing. My thumbnail had gone white from the pressure. I looked at it, then back out at the courtyard, and the circle stayed where I had left it, a clear ring in the grey.</p>
+<p>The library emptied this way, late afternoon in October, in waves. First the undergraduates who treated rain as a personal affront and fled at the first thickening of the sky. Then the postgraduates who stayed until the caffeine ran out and the screens blurred. Then nobody. A silence built into the walls, the kind these buildings were made to preserve. The flagstones went dark in patches as the rain moved across them.</p>
+<p>My thesis was open on the table behind me. It had been open since two o&#x27;clock, which was four hours ago now. The red annotation stopped two-thirds down a page I no longer remembered writing, and the blue ink had not started. I had walked past it several times with the concentration of a person avoiding a verdict. Eighteen months into postgraduate life, I had become very good at being left alone in public rooms. There was a particular skill to it. You arrive before the room fills, you take the table by the window, you keep your head down, and by the time it empties around you it can feel almost like having had company, if you do not look at it too closely. I had stopped looking at it too closely some months ago.</p>
+<p>The rain made a sound I knew. That was the trouble with it. It had nothing to do with this campus or this country. It belonged to a stretch of road south of Ullapool where the tarmac gives out and the puddles do not drain because the land is already saturated, already committed to being wet. I had stood on that road at eleven years old and understood for the first time that the weather did not care about me, and the understanding had been a relief. I could not locate the relief now. The rain only sounded like rain that was not here, falling on something far away, on a coast that had got on perfectly well without me for two years and would go on doing so.</p>
+<p>I turned the circle in the condensation into a slightly larger circle.</p>
+<p>And then the scarf.</p>
+<p>A slash of purple. Wrong color for that sky. My eye caught it before I decided to look, and I went still.</p>
+<p>Thrifted wool, the kind whose dye had settled into itself, richer than intended and harder to name. She was not hurrying. That was the first thing I understood. The courtyard had emptied, the rain coming in sideways now, and she stood in the center of it with the deliberate stillness of someone who had no particular interest in the weather.</p>
+<p>Priya Shah. I knew her from seminars, from corridors, from the way she claimed a library table three mornings a week with a coffee cup and a notebook written in violet ink. Fine arts, doctoral. Once, before a seminar began, I had heard her correct someone&#x27;s description of a slide. Not purple, she had said, without heat. Dioxazine violet pretending to be respectable. Three people had looked up as if color had become evidence. I had remembered the line with an embarrassment I did not examine.</p>
+<p>Black leather jacket darkened by rain to nearly charcoal. Purple streaks in dark hair plastered flat against her jaw. The nose ring, a small centered stud, caught the thin light from the library windows in a single sharp glint, appearing and disappearing as she shifted. Something under one arm, a folder or a book, held close against her side.</p>
+<p>I watched her stand in the rain. I told myself I was observing, not watching. The distinction mattered to me, which was how I knew it was already failing.</p>
+<p>Then she looked up.</p>
+<p>Not scanning, not glancing at the building by chance. Directly at the library window. At me, or at least at the lit rectangle I occupied. I could not read her face from that distance, but I could tell it was taking something in rather than offering anything out. Her stillness shifted, barely, but enough to register.</p>
+<p>My first instinct was to step back. I did not.</p>
+<p>Her expression did not change in those seconds, and the stillness was its own kind of answer. Full attention, then a quiet conclusion. The shape of assessment. Of being seen, weighed, placed somewhere not dangerous and not remarkable. Simply there. She lifted a hand and adjusted the scarf in one deliberate motion, something with no relation to warmth, and turned toward the administration building.</p>
+<p>She did not look back.</p>
+<p>By the time I pulled myself from the glass she was already gone around the corner of the block. The purple had left an afterimage on my sight, vivid as a word I did not know yet.</p>
+<p>I was not going after her. The south exit was the way home. I told myself this once, with unnecessary precision, and put the thesis into its folder without reading the page I had abandoned. The red ink vanished under the cover. The decision it wanted from me did not.</p>
+<p>The library exit was at the south end of the ground floor: a heavy fire door, shoulder first, then the usual exhale of conditioned air giving way to cold, two steps down onto wet stone. I had done it thousands of times in eighteen months.</p>
+<p>I pushed through, and the cold air never arrived.</p>
+<p>What arrived instead was warmth. It came from every surface at once, from above and below and from my own skin, not oppressive but matter-of-fact, the warmth of a day that had simply decided to be warm and meant to continue. My hands, which had been cold, were not cold. The wet on my shoulders dried between one breath and the next. I took a step and the ground was different, not flagstones but packed earth alongside grass, and the grass was the color green is supposed to be before you live somewhere that mostly forgets it.</p>
+<p>I was on a path I did not know, walking it as if I did.</p>
+<p>The trees were plane trees, large ones, their canopy casting coin-shaped panels of light that shifted when the breeze moved the leaves, which it did constantly, lazily, as though the air itself were comfortable. The light through them was not metaphorically gold but close to it: amber-warm, directional, the kind that only happens at a particular angle of late-afternoon sun. I had not seen it since sometime last year, and my body received it with a recognition close to grief.</p>
+<p>I did not try to understand where I was. The absence of trying simply was, the way the warmth simply was, the way the path continued under the plane trees and I followed it because it would not have occurred to me not to.</p>
+<p>She was beside me.</p>
+<p>I knew it before I registered any detail of her. It arrived first in my chest, in my arms, in the awareness of another warmth in the air. Her hand hung at her side, close enough that the back of mine knew it was there without touch. Not reaching. Not held. Near in the way a living thing changes the temperature of the space around it. I turned my head.</p>
+<p>She wore a lavender dress, loose and easy, the kind that falls as if it has made an agreement with gravity. Her hair was its natural dark brown, unadorned. The nose ring was gone. There was nothing guarded in her face here. Not a single shuttered place. She stood in the open afternoon light with the ease of someone who, in this version of the world, had not been asked to protect herself from being seen.</p>
+<p>She watched the trees with a calm that was not performed. It was not the absence of guardedness so much as the absence of any reason for it. Wherever this was, no one here had taught her to keep watch. I noticed the difference and did not let myself name what it told me, because the naming would have meant comparing it to the woman in the courtyard, and the woman in the courtyard had given me nothing to compare it against.</p>
+<p>Then her hand brushed mine.</p>
+<p>A passing thing, unremarkable to her, the easy unconscious touch of someone who knows exactly where another person is in space and has no reason to avoid it. Three fingers, the middle one most of all, a soft movement from right to left, a brief arc of contact. In that place, perhaps, this was ordinary. Here, it would have been impossible.</p>
+<p>I did not move.</p>
+<p>She was speaking. I heard the words but did not register them one by one. They reached me below comprehension, like warmth soaking through cloth, meaning I recognized and could not translate. Her laughter, when it came, was not a punctuation mark but a condition, a climate she carried. She smiled, and there was a quiet ease in it, and I understood that she did not laugh or smile as actions. She inhabited them.</p>
+<p>She glanced up at the canopy.</p>
+<p>I followed her gaze, and the petal fell. A single violet petal, small, turning once through a shaft of gold light. I did not reach for it. My hand rose on its own, palm up, the precise angle of open reception. It landed in the center of my palm.</p>
+<p>I felt it distinctly. Velvet. Not the soft generalized lightness of petals in similes. Velvet specifically, that particular texture with its directional pile, the way it felt fractionally different depending on which way I drew my thumb across it. It had weight. There was a thing in my palm and it had weight and texture and I could have described both.</p>
+<p>She looked at my hand and smiled. It was the smile of someone for whom this moment had context I did not have. Not permission. Not promise. Only recognition.</p>
+<p>The warmth held. The light stayed gentle. I was standing beside her on a path in a world that smelled of cut grass and something floral beneath it, violet and clean, and I realized my hands were open. That was what startled me. Every instinct that should have been braced, guarded, prepared, none of them were. I turned toward her, and something rose in my chest, unformed and undeniable. I did not know what it meant. I only knew it had happened to me. That was not the same as it belonging to me.</p>
+<p>A sound entered the moment.</p>
+<p>It did not belong there. It had no shape at first, just a disturbance at the edge of awareness, and then it resolved into the hard, distant strike of a door meeting a metal frame. One sound, sharp enough to feel as if it came from another kind of air entirely, cutting across the softness we had been standing inside.</p>
+<p>The warmth ended at once, with the completeness of a circuit breaking. My body noticed before my mind did: cold, wet, stone underfoot. Gold light gone. Grass gone. Path gone. The petal.</p>
+<p>My face was wet. Rain on my face, ordinary campus rain, falling where I stood at the top of two stone steps outside the library&#x27;s south exit. My shoulder was still pressed against the door as if I had only just come through it. For several seconds I could not remember what my hands were for. My body had returned before the rest of me had agreed to it.</p>
+<p>The courtyard ahead was grey and empty, flagstones dark and reflective, the administration building across the way with its lit windows and its blank official face.</p>
+<p>I was alone.</p>
+<p>I stood there with rain falling on my head and my jacket and forced myself to count what was real. Concrete. Wet stone. The rust-stained drainpipe to my left. The familiar geography of a place I had walked through hundreds of times. I breathed in the smell of it: cold air, diesel from the service road, a trace of burnt café espresso, and beneath all of it the library, paper and binding and the faint residue of old damp. Each thing checked out. Each thing was exactly where it should be. The campus had not moved an inch while I was somewhere else, and that, I understood, was the trouble. Nothing here had registered my absence, because by every measure available to it I had not been absent at all. I had stood at the top of two steps for the length of a single pushed door.</p>
+<p>I opened my palm.</p>
+<p>Empty. Completely empty, skin unmarked, the slight crosshatching of the lifeline and nothing else. No petal. No residue of one. No smear of color, no crushed velvet, no waxy trace.</p>
+<p>I stood on the wet steps with my hand open until the cold of the rain reasserted itself, and then I put my hands in my pockets and walked home.</p>
+<p>The flat was as I had left it: two mugs of tea, neither of them fresh; library books stacked according to return date; the boiler making its irregular clicking sound. I put the thesis folder on the table and only then noticed the word written in the margin of a page. <em>Cridhe.</em> My own careful academic hand, the one people mistook for calm. Gaelic for heart. A word I had not needed in years. I had no memory of writing it.</p>
+<p>I sat on the windowsill, where the radiator made it the only warm part of the flat. Outside, the world was grey and rain-slicked and specific. Tarmac, streetlights, bins on the corner, the neighbor&#x27;s unwashed Volvo. I lifted my palm into the yellow lamplight. It was unmarked. I looked at it for a long time, and ran through the explanations. Microsleep. Stress-induced hypnagogia, the mind&#x27;s half-dreaming threshold. Sensory distortion from too many hours on the thesis. None of them accounted for the precise texture of velvet I could still feel in the center of my palm, a tactile imprint that refused to fade.</p>
+<p>Worse, none of them accounted for how badly I wanted it to have been real. I could name the want. I could set it beside the rational explanations and see that it was larger than any of them, denser, more insistent. The want was the part that should have frightened me, and I noticed that it did not. I was only careful with it, the way you are careful with something you are not yet willing to lose.</p>
+<p>The touch remained on the back of my hand too. Three fingers, the middle most of all. A brief sweep from right to left. I could have mapped the exact path on my skin. The memory should have been degrading by now, touch dissolving into the general blur of sensation. It was not. It sat there with impossible clarity, like a name carved into wood.</p>
+<p>The rain kept on. Its steady insistence reminded me of the coast, of weather that belongs to places near a cold sea. It reminded me of home, which was not a thought I had often. I examined it where it appeared, behind a rain-streaked window in a flat that was not mine, in a city I had not yet learned, and then I let it drift back into the sound of the rain.</p>
+<p>What stayed was the warmth. Not the heat of the radiator under me, which I could account for, but the other warmth, the one that had come from every surface at once and from my own skin, and that the flat could not produce no matter how long the boiler clicked. I had spent two winters in this city learning the particular cold of it, the way it gets into the seams of a coat and stays, and in the space of a pushed door I had been somewhere the cold had never reached. My body had believed it completely. That was the thing I kept arriving back at. Not whether it had happened, which I could not settle, but that some part of me had stopped bracing for the first time in longer than I wanted to measure, and had not wanted to start again.</p>
+<p>I stood at the window and looked at the fine arts block, diagonally across from my building. Most of the windows were dark. The administrators left at five, the students stayed until eight, and it was nearly eleven now. But two windows on the third floor were lit, distinct yellow rectangles in the rain-dark building. And in one of them, a figure stood at a slight angle to the frame, as if caught in the middle of something else, and around the neck, a streak of purple, distinct and unmistakable.</p>
+<p>I thought: I could recognize that scarf through glass in the rain from three hundred feet away.</p>
+<p>I did not know what to do with that sentence. I thought it anyway.</p>
+<p>The figure did not move. Neither did I. The rain ran in slow lines down the glass between us, and from that distance she was barely more than posture and color, and still I could feel the exact angle of her shoulders. Beneath the wanting, very quietly, something else moved. The first edge of a question I was not ready to ask. What did it mean that I had spent six hours assembling a version of a woman who had not, in this world, said a single word to me?</p>
+<p>Across the rain, the purple scarf remained unmistakable.</p>
+<p>I opened my palm in the lamplight.</p>
+<p>Empty.</p>
+    </div>
+    <div class="sample-cta">
+      <p>End of the sample chapter.</p>
+      <a class="btn primary" href="#author">More About the Book</a>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="kicker">Early Readers</div>
+    <h2>What first readers are saying</h2>
+    <div style="height:24px"></div>
+    <div class="quotes">
+      <blockquote>&ldquo;A romance that is finally tired of confusing intensity with love. The book knows its hero is frightening, and that is exactly what lets you keep reading. Priya is who I came to love.&rdquo;<span class="src">&mdash; Beta Reader</span></blockquote>
+      <blockquote>&ldquo;It does the hard thing: an ethical love story that never sands off the strangeness or the danger. The chapter where they negotiate the rules shouldn&rsquo;t be that charged &mdash; but it is. I underlined half of it.&rdquo;<span class="src">&mdash; Alpha Reader</span></blockquote>
+    </div>
+    <p class="note">Pull-quotes drawn from early reader feedback; full alpha and beta reports available on request.</p>
+  </div>
+</section>
+
+<section id="author">
+  <div class="wrap">
+    <div class="kicker">The Author</div>
+    <h2>Mira Lavelle</h2>
+    <div style="height:24px"></div>
+    <div class="about">
+      <div class="avatar">ML</div>
+      <p>Mira Lavelle writes upmarket, lyrical fiction for readers who like their romance with a conscience &mdash; magic that is ambiguous, characters who are morally complicated, and consent that is never negotiable. Drawn to rain, archives, thresholds, and the quiet politics of being known, she writes love stories where attention can be tenderness or trespass, and where repair is something you tend rather than something you are owed. <em>This Version of Us</em> is a campus love story about two people caught in something impossible &mdash; and the choice that makes a beginning possible in this world.</p>
+    </div>
+  </div>
+</section>
+
+<section id="buy" class="finalcta">
+  <div class="wrap">
+    <div class="kicker">Begin Again</div>
+    <h2>Being known is not the same as being loved.</h2>
+    <div class="cta" style="justify-content:center">
+      <a class="btn primary" href="#sample">Read Chapter 1</a>
+      <a class="btn ghost" href="#">Add on Goodreads</a>
+    </div>
+    <p class="note">Placeholder links. Add your retailer and Goodreads URLs once the listing exists.</p>
+  </div>
+</section>
+
+<footer>
+  &copy; <span id="yr"></span> Mira Lavelle &middot; This Version of Us &middot; All rights reserved.
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</footer>
+
+</body>
+</html>

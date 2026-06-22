@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What I'm Writing Next — Vote · Three Worlds</title>
+<meta name="description" content="Works in progress across all three worlds — vote on which book gets written next and be the first to know when it lands.">
+<link rel="stylesheet" href="../css/site.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">THREE <b>WORLDS</b></div>
+    <div class="navlinks">
+      <a href="../index.html">← Home</a>
+      <a href="../index.html#shelf">The Shelf</a>
+      <a href="../index.html#worlds">The Worlds</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="stars"></div>
+  <div class="wrap" style="padding:70px 22px 56px;text-align:center">
+    <p class="reyebrow" style="color:var(--gold)">You Decide</p>
+    <h1 class="rtitle" style="font-size:50px">What should I write next?</h1>
+    <p class="lead" style="margin-top:18px">I have more stories than hands. Here's what's in progress across all three worlds. Cast a vote — the leader moves up my desk, and you'll be first to know when it's done.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">In Progress</p>
+    <h2>Vote for the next book</h2>
+    <div class="wipgrid" id="wipgrid" style="margin-top:28px">
+
+      <div class="wipcard world-vesper" data-id="opponent2">
+        <div class="wt">The Opponent — Book Two</div>
+        <div class="wmeta">Vesper Locke · Science Fiction</div>
+        <p>The broadcast aired. Now four hundred systems have to decide what to do with the truth — and Helix has nothing left to lose.</p>
+        <div class="votebar"><span style="width:34%"></span></div>
+        <div class="votepct"><span class="pc">34%</span><span class="ct">votes</span></div>
+        <button class="btn primary votebtn" data-vote>Vote for this</button>
+      </div>
+
+      <div class="wipcard world-eveline" data-id="bridge3">
+        <div class="wt">The Bridge-Walker: The Convergence</div>
+        <div class="wmeta">Eveline Cross · Portal Fantasy · Book Three</div>
+        <p>Every door the children ever opened is about to close at once. The trilogy's finale — and the war for the threshold.</p>
+        <div class="votebar"><span style="width:41%"></span></div>
+        <div class="votepct"><span class="pc">41%</span><span class="ct">votes</span></div>
+        <button class="btn primary votebtn" data-vote>Vote for this</button>
+      </div>
+
+      <div class="wipcard world-mira" data-id="noonesgirl">
+        <div class="wt">No One's Girl</div>
+        <div class="wmeta">Mira Lavelle · Romance</div>
+        <p>She lived inside everyone else's story. Now she's writing her own — and the man who taught her to disappear wants her back.</p>
+        <div class="votebar"><span style="width:25%"></span></div>
+        <div class="votepct"><span class="pc">25%</span><span class="ct">votes</span></div>
+        <button class="btn primary votebtn" data-vote>Vote for this</button>
+      </div>
+
+    </div>
+
+    <p class="pollnote">This is a working demo: votes update on-screen only. To make it real, drop in a <strong>Tally / StrawPoll / Crowdsignal</strong> embed, or wire the buttons to a tiny <strong>Supabase / Firebase</strong> table for live, persistent counts and spam control.</p>
+  </div>
+</section>
+
+<section id="notify" class="finalcta">
+  <div class="wrap news">
+    <p class="kicker" style="color:var(--gold)">Vote + Get Notified</p>
+    <h2>Be first when your pick goes live</h2>
+    <p style="margin-top:10px">Leave your email and I'll tell you the moment the winning book is written — and only then.</p>
+    <form onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';">
+      <input type="email" placeholder="your@email.com" required>
+      <button class="btn primary" type="submit">Notify me</button>
+    </form>
+    <p class="ok" style="display:none;color:var(--gold);margin-top:12px">Thanks — your vote counts and you're on the list.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">THREE WORLDS · What I'm Writing Next · <a href="../index.html">Home</a>
+  <p class="note">Concept loglines and vote tallies are placeholders for demonstration. Add or edit concepts by dropping a cover + logline into your <code>_WIP</code> folder.</p></div>
+</footer>
+
+<script>
+  // on-screen demo tally
+  document.querySelectorAll('[data-vote]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var card = btn.closest('.wipcard');
+      var bar = card.querySelector('.votebar span');
+      var pc  = card.querySelector('.pc');
+      var w = Math.min(100, parseInt(bar.style.width) + 3);
+      bar.style.width = w + '%'; pc.textContent = w + '%';
+      btn.textContent = 'Voted ✓'; btn.disabled = true; btn.style.opacity = .7;
+      document.getElementById('notify').scrollIntoView({behavior:'smooth'});
+    });
+  });
+</script>
+</body>
+</html>

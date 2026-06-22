@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1200" viewBox="0 0 800 1200" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a0c14"/>
+      <stop offset="0.55" stop-color="#16121c"/>
+      <stop offset="1" stop-color="#2e131c"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.38" r="0.5">
+      <stop offset="0" stop-color="#ecd08a" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#ecd08a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="1200" fill="url(#bg)"/>
+  <rect width="800" height="1200" fill="url(#glow)"/>
+
+  <!-- thin frame -->
+  <rect x="80" y="80" width="640" height="1040" fill="none" stroke="#c9a24b" stroke-opacity="0.5" stroke-width="1.5"/>
+
+  <!-- lone silhouette: a figure inside a ring, with a faint crossed line -->
+  <circle cx="400" cy="430" r="120" fill="none" stroke="#8b2635" stroke-opacity="0.6" stroke-width="2"/>
+  <g fill="#ecd08a" opacity="0.92">
+    <circle cx="400" cy="392" r="26"/>
+    <path d="M348,492 Q400,420 452,492 Z"/>
+  </g>
+  <line x1="300" y1="330" x2="500" y2="530" stroke="#c9a24b" stroke-opacity="0.35" stroke-width="1.5"/>
+
+  <!-- title -->
+  <text x="400" y="742" text-anchor="middle" fill="#ffffff" font-size="76" font-weight="800" letter-spacing="3">NO ONE&#8217;S</text>
+  <text x="400" y="826" text-anchor="middle" fill="#ffffff" font-size="76" font-weight="800" letter-spacing="14">GIRL</text>
+  <rect x="350" y="858" width="100" height="2" fill="#8b2635"/>
+  <text x="400" y="906" text-anchor="middle" fill="#d9b9c0" font-size="20" letter-spacing="4" font-family="Georgia, serif" font-style="italic">now she writes her own story</text>
+
+  <!-- footer -->
+  <text x="400" y="1064" text-anchor="middle" fill="#d9b46a" font-size="15" letter-spacing="9" opacity="0.9">COMING SOON</text>
+  <text x="400" y="1100" text-anchor="middle" fill="#d9b9c0" font-size="17" letter-spacing="8" opacity="0.8">A NOVEL</text>
+  <text x="400" y="1150" text-anchor="middle" fill="#f3e4c4" font-size="32" font-weight="700" letter-spacing="8">MIRA LAVELLE</text>
+</svg>

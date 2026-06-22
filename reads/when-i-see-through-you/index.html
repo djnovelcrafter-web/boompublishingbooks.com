@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>When I See Through You — Mira Lavelle</title>
+<meta name="description" content="When I See Through You by Mira Lavelle — a sweeping WWII historical romance with a fated, uncanny bond. A Georgia girl whose dead sweetheart isn't dead, the half of a sacred jade medallion that lets her see through his eyes across a war she'll cross the world to win, and a hundred-year prophecy that asks her, in the end, to let it go.">
+<style>
+  :root{
+    --ink:#0c1019; --ink2:#141b2a; --slate:#1d2638;
+    --gold:#c9a24b; --goldglow:#ecd08a; --oxblood:#8b2635; --ember:#c4633a;
+    --paper:#f3ece0; --cream:#efe7d8; --muted:#a7a08e; --line:rgba(201,162,75,.20);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--ink);color:var(--paper);
+       font-family:Georgia,'Times New Roman',serif;line-height:1.7;}
+  h1,h2,h3,.brand{font-family:'Cinzel','Trajan Pro',Georgia,serif;letter-spacing:.04em;line-height:1.15}
+  a{color:var(--goldglow);text-decoration:none}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+
+  nav{position:sticky;top:0;z-index:20;background:rgba(12,16,25,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brand{font-size:18px;color:#fff}
+  .navlinks a{font-family:Arial,Helvetica,sans-serif;font-size:12.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-left:20px}
+  .navlinks a:hover{color:var(--goldglow)}
+  @media(max-width:720px){.navlinks{display:none}}
+
+  header.hero{position:relative;overflow:hidden;
+    background:
+      radial-gradient(120% 80% at 50% 115%, rgba(196,99,58,.14), transparent 60%),
+      linear-gradient(180deg,#0c1019 0%, #141b2a 38%, #243247 64%, #5b7c99 86%, #d9b46a 96%, #0c1019 100%);}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;padding:72px 22px 86px}
+  @media(max-width:860px){.hero .wrap{grid-template-columns:1fr;text-align:center}}
+  .eyebrow{font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:.30em;text-transform:uppercase;color:var(--goldglow);margin:0 0 14px}
+  .hero h1{font-size:54px;margin:0;color:#fff;text-shadow:0 3px 26px rgba(91,124,153,.45)}
+  .lede{font-size:18.5px;color:#f0e7d8;margin:22px 0 8px}
+  .byline{font-family:'Cinzel',Georgia,serif;letter-spacing:.12em;font-size:17px;color:var(--goldglow);margin-top:10px}
+  .cta{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+  @media(max-width:860px){.cta{justify-content:center}}
+  .btn{font-family:Arial,Helvetica,sans-serif;font-size:13.5px;letter-spacing:.08em;text-transform:uppercase;
+       padding:13px 22px;border-radius:40px;display:inline-block;font-weight:700;cursor:pointer}
+  .btn.primary{background:linear-gradient(90deg,var(--gold),var(--goldglow));color:#1a1408;box-shadow:0 8px 26px rgba(201,162,75,.32)}
+  .btn.ghost{border:1px solid var(--goldglow);color:var(--goldglow)}
+  .btn:hover{transform:translateY(-1px)}
+
+  .coverwrap{justify-self:center}
+  .coverart{display:block;width:320px;max-width:80vw;border-radius:8px;overflow:hidden;
+            box-shadow:0 26px 70px rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.08);transition:transform .2s}
+  .coverart:hover{transform:translateY(-3px)}
+  .coverart img{width:100%;height:auto;display:block}
+  .covercap{font-family:Arial,Helvetica,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:center;margin-top:12px}
+
+  section{padding:68px 0;border-top:1px solid var(--line)}
+  section h2{font-size:30px;color:#fff;margin:0 0 8px;text-align:center}
+  .kicker{text-align:center;font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:28px}
+  .blurb p{font-size:18px;max-width:768px;margin:0 auto 18px;color:#ece4d6}
+  .blurb .turn{text-align:center;font-style:italic;color:var(--goldglow);font-size:20px;margin-top:26px}
+
+  .triad{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:10px}
+  @media(max-width:880px){.triad{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.triad{grid-template-columns:1fr}}
+  .card{background:linear-gradient(180deg,rgba(29,38,56,.7),rgba(12,16,25,.4));border:1px solid var(--line);
+        border-radius:14px;padding:24px 20px;text-align:center}
+  .card .ic{font-size:26px}
+  .card h3{font-size:19px;color:#fff;margin:10px 0 4px}
+  .card .role{font-family:Arial,Helvetica,sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+  .card p{color:var(--muted);font-size:14.5px;margin:0}
+
+  .themes{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:860px;margin:0 auto}
+  @media(max-width:680px){.themes{grid-template-columns:1fr}}
+  .theme{border-left:2px solid var(--oxblood);padding:6px 0 6px 18px}
+  .theme h3{font-size:16.5px;color:var(--goldglow);margin:0 0 4px}
+  .theme p{margin:0;color:var(--muted);font-size:14.5px}
+
+  .sample{background:linear-gradient(180deg,#0e1320,#0c1019)}
+  .reader{max-width:720px;margin:0 auto;background:var(--paper);color:#241d12;border-radius:10px;
+          padding:48px 52px;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+  @media(max-width:560px){.reader{padding:34px 24px}}
+  .reader .chtag{font-family:Arial,Helvetica,sans-serif;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:#8b2635;text-align:center;margin:0 0 6px}
+  .reader h3{font-size:26px;text-align:center;color:#1a140b;margin:0 0 28px;font-family:'Cinzel',Georgia,serif}
+  .reader p{font-size:17.5px;line-height:1.8;margin:0 0 16px;color:#241d12}
+  .reader p.first::first-letter{font-family:'Cinzel',Georgia,serif;font-size:54px;line-height:.8;float:left;padding:6px 10px 0 0;color:#8b2635}
+  .reader .dinkus{text-align:center;color:#b08b3a;letter-spacing:.5em;margin:26px 0;font-size:18px}
+  .reader em{font-style:italic}
+  .samplenote{text-align:center;color:var(--muted);font-family:Arial,Helvetica,sans-serif;font-size:13px;margin-top:24px}
+
+  .quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:920px;margin:0 auto}
+  @media(max-width:680px){.quotes{grid-template-columns:1fr}}
+  blockquote{margin:0;background:rgba(201,162,75,.06);border:1px solid var(--line);border-radius:14px;padding:24px;font-size:16.5px;color:#ece4d6}
+  blockquote .stars{color:var(--goldglow);letter-spacing:.2em;font-size:14px}
+  blockquote .src{display:block;margin-top:12px;font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:.10em;text-transform:uppercase;color:var(--gold);font-style:normal}
+  .ratingline{text-align:center;color:var(--paper);margin:-10px 0 26px;font-family:Arial,Helvetica,sans-serif;font-size:14px;letter-spacing:.08em}
+  .ratingline b{color:var(--goldglow);letter-spacing:.2em}
+
+  .comps{text-align:center;color:var(--muted);font-size:17px;max-width:760px;margin:30px auto 0}
+  .comps strong{color:var(--paper)}
+
+  .finalcta{background:linear-gradient(180deg,#141b2a,#243247);text-align:center}
+  footer{padding:30px 0;text-align:center;color:var(--muted);font-family:Arial,Helvetica,sans-serif;font-size:13px;border-top:1px solid var(--line)}
+  .note{max-width:780px;margin:18px auto 0;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#7d7765;text-align:center}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">WHEN I SEE THROUGH YOU</div>
+    <div class="navlinks">
+      <a href="#story">Story</a>
+      <a href="#cast">Cast</a>
+      <a href="#themes">Themes</a>
+      <a href="#map">Journey</a>
+      <a href="#sample">Sample</a>
+      <a href="#reviews">Early Readers</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">WWII Historical Romance &middot; Fated Bond</p>
+      <h1>When I See Through You</h1>
+      <p class="lede">A Georgia girl whose dead sweetheart isn't dead &mdash; the half of a sacred jade medallion that lets her see through his eyes across a war she'll cross the world to win, and a hundred-year prophecy that asks her, in the end, to give it away.</p>
+      <p class="byline">a novel by Mira Lavelle</p>
+      <div class="cta">
+        <a class="btn primary" href="#sample">Read Chapter One</a>
+        <a class="btn ghost" href="#story">The Story</a>
+      </div>
+    </div>
+    <div class="coverwrap">
+      <div class="coverart"><img src="../../covers/when-i-see-through-you.png" alt="When I See Through You — cover"></div>
+      <p class="covercap">A sweeping WWII love story</p>
+    </div>
+  </div>
+</header>
+
+<section id="story" class="blurb">
+  <div class="wrap">
+    <p class="kicker">The Story</p>
+    <h2>A love that has to cross a war to come home</h2>
+    <p>Coweta County, Georgia, 1941. Rose Vale has spent her whole life performing &mdash; a bright, bubbly belle whose dazzling chatter hides the watchful, exacting girl no one is allowed to meet. Two boys court her that last golden summer: Ray Dalton, gold and gregarious and certain the world will arrange itself around him, and quiet Jack Mercer, who never says much and sees everything &mdash; the one person alive who looks straight through her bright voice to the girl underneath.</p>
+    <p>When the war takes them both, Rose gives Jack the one truly precious thing she owns: half of her grandmother's jade pendant, an heirloom older and stranger than anyone in her family quite remembers. <em>Wear it home to me,</em> she tells him. <em>Bring it back.</em></p>
+    <p>Then a telegram says <em>missing.</em> Then Ray comes home alone &mdash; a grieving hero with a story about how Jack died &mdash; and the stone he hands back to Rose begins, against everything she believes, to show her the truth: that Jack is alive, a world away, at the cold edge of another war. That the fall was no accident. And that the half-moon of jade at her throat is one piece of a sacred thing split a hundred years ago in a burning Indian village &mdash; a thing two peoples have hunted ever since, one in the name of power, one in the name of love.</p>
+    <p class="turn">The stone that is leading her home was never only hers to keep &mdash; and the hardest thing it will ask of her is not to hold on, but to let go.</p>
+  </div>
+</section>
+
+<section id="cast">
+  <div class="wrap">
+    <p class="kicker">The Cast</p>
+    <h2>Two shadows, one stone, a hundred-year debt</h2>
+    <div class="triad">
+      <div class="card"><div class="ic">&#9728;</div><h3>Rose Vale</h3><div class="role">The Performer</div><p>A Georgia belle whose dazzling "bright voice" hides a watchful, forensic mind. Her victory is learning to set the mask down &mdash; and, when the war demands it, to wield it like a blade.</p></div>
+      <div class="card"><div class="ic">&#9826;</div><h3>Jack Mercer</h3><div class="role">The One Who Sees</div><p>Quiet, literal, unhurried; he says almost nothing and notices everything. The single person alive who looks through Rose's performance to the girl underneath &mdash; and never looks away.</p></div>
+      <div class="card"><div class="ic">&#9788;</div><h3>Ray Dalton</h3><div class="role">The Best Friend</div><p>Gold, gregarious, beloved, certain the world will arrange itself around him &mdash; until it doesn't. Not a villain but a tragedy: a man who loves the friend he wrongs.</p></div>
+      <div class="card"><div class="ic">&#9789;</div><h3>Devraj</h3><div class="role">The Keeper</div><p>The heir of a robbed South Indian hill village, hunting a hundred years for the stolen heart of his people's goddess &mdash; and the one who finally carries it home.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="themes">
+  <div class="wrap">
+    <p class="kicker">What It's About</p>
+    <h2>To be seen is the only magic worth keeping</h2>
+    <div class="themes">
+      <div class="theme"><h3>Being Seen</h3><p>The deepest intimacy in the book is attention. To be truly seen &mdash; through the performance, through the war, through death itself &mdash; is the love that outlasts everything.</p></div>
+      <div class="theme"><h3>Love vs. Power</h3><p>One prophecy, two readings: a sacred thing that joins many hearts can free a people by love, or enslave the world by force. The jade chooses love, and will answer nothing else.</p></div>
+      <div class="theme"><h3>The Letting-Go</h3><p>The keeping was never the gift. The hardest, truest act of love is the open hand &mdash; giving back the most precious thing you own, because it was never yours to hold.</p></div>
+      <div class="theme"><h3>The Bright Voice</h3><p>A mask can be a cage or a tool. Rose's whole arc is learning the difference &mdash; and what a woman does with the performance that kept her safe and kept her hidden.</p></div>
+    </div>
+    <p class="comps">For readers of <strong>The Nightingale</strong> (Kristin Hannah), <strong>The Winter Sea</strong> (Susanna Kearsley), <strong>Outlander</strong> (Diana Gabaldon), and the love-magic of <strong>Alice Hoffman</strong>.</p>
+  </div>
+</section>
+
+<section id="map">
+  <div class="wrap">
+    <p class="kicker">The Geography</p>
+    <h2>Two roads to one river</h2>
+    <p style="text-align:center;max-width:700px;margin:0 auto 28px;color:var(--muted);font-size:17px">Jack is swept east into a second war; Rose crosses the world up the Persian Corridor to find the man everyone says is dead; and a stolen stone makes its hundred-year way home. Every road bends toward one cold green river in the Caucasus — the Karsai.</p>
+    <img src="../../maps/WISTU-map.png" alt="Journey map — Jack's and Rose's paths converging at the Karsai, with the relic's road home to India" style="display:block;width:100%;max-width:1000px;margin:0 auto;border-radius:12px;border:1px solid var(--line);box-shadow:0 18px 50px rgba(0,0,0,.5)">
+  </div>
+</section>
+
+<section id="sample" class="sample">
+  <div class="wrap">
+    <p class="kicker">Read the Opening</p>
+    <h2>Chapter One</h2>
+    <div class="reader">
+      <p class="chtag">When I See Through You</p>
+      <h3>The Two Shadows</h3>
+      <p class="first">There was a war on the far side of the world that summer, but it had not yet learned the road to Coweta County, and so on the Fourth of July in the year 1941 the whole county put on its second-best and came down to the church grove by the river to eat too much, court too openly, and pretend with its entire heart that the radio had been making the foreign parts up.</p>
+      <p>Rose Ashford Vale was sixteen years old and at the very top of her powers.</p>
+      <p>She knew it, too, which was half of what made it true. She moved through the grove the way a good swimmer moves through familiar water &mdash; easily, and faster than she appeared to, and with a perfect private knowledge of where the cold currents ran.</p>
+      <p>Two of the county's loops, that summer, bent toward Rose. Everybody had noticed. They had even, in the manner of counties, given the thing a name. <em>The two shadows,</em> they called the Mercer boy and the Dalton boy, because wherever Rose Vale's yellow dress went that summer, two young men went after it in their two different ways &mdash; the one out in front of her like sunshine, the other a step behind and to the side, quiet, where you did not see him until you turned your head.</p>
+      <div class="dinkus">&#8258;</div>
+      <p>When the big green firework went up &mdash; the best of the poor dozen, a great soft chrysanthemum of green fire that hung over the river &mdash; Rose did not watch the green fire. She turned her head, and found Jack Mercer at the dark edge of the quilts, lit green as a thing at the bottom of clear water, and found that he was not watching the fire either.</p>
+      <p>He was watching her. And he did not look away when she caught him.</p>
+      <p class="samplenote">End of sample &middot; <em>The Two Shadows</em>, Chapter One of thirty-nine</p>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <p class="kicker">Early Readers</p>
+    <h2>Alpha &amp; Beta Reactions</h2>
+    <p class="ratingline">Composite reader rating &nbsp; <b>&#9733;&#9733;&#9733;&#9733;&#189;</b> &nbsp; 4.4 / 5</p>
+    <div class="quotes">
+      <blockquote><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>"Reader, I fell in love. Jack Mercer is my new fictional husband and I will not be taking questions. This is the rare slow burn that gets that the burn is in the <em>attention</em> &mdash; and the ending wrecked me in the best possible way. Bring tissues."<span class="src">Beta reader &middot; historical-romance superfan</span></blockquote>
+      <blockquote><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>"Beautifully written and genuinely discussable. It gives its stolen sacred object <em>back</em>, and lets the Indian heir live and carry it home. My club will argue about the ending for three meetings &mdash; the highest compliment I give a book."<span class="src">Beta reader &middot; book-club lead</span></blockquote>
+      <blockquote><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>"A real book with a real spine &mdash; a love story about being <em>seen</em>. Rose is one of the more memorable romance heroines I've read at this level, and the title isn't decoration. It's the thesis, and the book earns it."<span class="src">Alpha reader &middot; developmental editor</span></blockquote>
+      <blockquote><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>"I came in skeptical and left moved. The over-explaining is gone, and the chapter from inside Devraj is the best in the book. Underneath, there was always a genuinely good book here &mdash; now you can see it."<span class="src">Beta reader &middot; the tough one</span></blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="buy" class="finalcta">
+  <div class="wrap">
+    <h2>Every road leads back to her.</h2>
+    <p class="lede" style="max-width:660px;margin:0 auto 22px">Thirty-nine chapters. Two halves of one stone. A love that crosses an ocean, a betrayal, and a hundred-year prophecy to come home.</p>
+    <div class="cta" style="justify-content:center">
+      <a class="btn primary" href="#sample">Read Chapter One</a>
+      <a class="btn ghost" href="#story">Back to the Story</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    WHEN I SEE THROUGH YOU &middot; a novel by Mira Lavelle<br>
+    A sweeping WWII historical romance
+  </div>
+</footer>
+
+</body>
+</html>

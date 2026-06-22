@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Storyteller — One Mind, Many Hats</title>
+<meta name="description" content="Personality isn't who you are. It's what you wear. DJ writes as Vesper Locke (sci-fi), Eveline Cross (portal fantasy), and Mira Lavelle (gothic romance) — many hats worn by one mind.">
+<link rel="stylesheet" href="css/site.css">
+<style>
+  :root{--vesper:#5fd6ff;--eveline:#33b9b0;--mira:#c9a24b;--muted:#a7a08e}
+  @keyframes shift{0%{background-position:0% 50%}100%{background-position:220% 50%}}
+  @keyframes fa{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+
+  /* HERO + QUOTE */
+  .top{position:relative;overflow:hidden;text-align:center;padding:82px 22px 64px;
+    background:
+      radial-gradient(55% 60% at 15% 15%, rgba(169,139,255,.22), transparent 60%),
+      radial-gradient(55% 60% at 85% 20%, rgba(95,214,255,.16), transparent 60%),
+      radial-gradient(70% 70% at 50% 108%, rgba(255,138,106,.18), transparent 60%),
+      linear-gradient(180deg,#090d15,#111a2b);}
+  .top .eye{font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:.36em;text-transform:uppercase;color:#cdb3e6;margin:0 0 16px}
+  .top h1{font-size:clamp(34px,6vw,58px);line-height:1.04;margin:0;font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#fff}
+  .top .quote{margin:24px auto 0;max-width:620px}
+  .top .q1{font-family:'Cinzel',Georgia,serif;font-size:clamp(20px,3.2vw,26px);color:#efe7d8;margin:0;line-height:1.25}
+  .top .q2{font-family:'Cinzel',Georgia,serif;font-size:clamp(22px,3.8vw,32px);margin:2px 0 0;line-height:1.2;
+    background:linear-gradient(100deg,#a98bff,#5fd6ff,#ffd56a,#ff8a6a,#ff6a9c);background-size:220% auto;
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shift 10s linear infinite}
+  .top cite{display:block;margin-top:14px;font-style:normal;letter-spacing:.3em;text-transform:uppercase;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#cdb3e6}
+
+  /* SPLIT: intro text (left) + hats (right) */
+  .split{background:#000;padding:58px 0 82px}
+  .split .inner{display:grid;grid-template-columns:.82fr 1.18fr;gap:54px;max-width:1080px;margin:0 auto;padding:0 22px;align-items:start}
+  @media(max-width:820px){.split .inner{grid-template-columns:1fr;gap:34px}}
+  .split .left{position:sticky;top:86px}
+  @media(max-width:820px){.split .left{position:static;text-align:center}}
+  .split .left p{font-size:18px;line-height:1.8;color:#e3dccd;margin:0 0 18px}
+  .split .left .lead-in{font-family:'Cinzel',Georgia,serif;font-size:23px;color:#cdb3e6;letter-spacing:.04em}
+
+  .right{display:flex;flex-direction:column;gap:50px}
+  .hatblock .frame{aspect-ratio:16/9;border-radius:18px;overflow:hidden;background:#000;border:1px solid var(--ac);
+    box-shadow:0 18px 46px rgba(0,0,0,.7), 0 0 30px -8px var(--ac);animation:fa 7s ease-in-out infinite}
+  .hatblock .frame img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+  .hatblock:hover .frame img{transform:scale(1.05)}
+  .hatblock h3{font-family:'Cinzel',Georgia,serif;font-size:clamp(24px,3.4vw,32px);color:#fff;margin:18px 0 3px}
+  .hatblock .g{font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ac);margin:0 0 12px}
+  .hatblock .d{font-size:16.5px;line-height:1.7;color:#ddd6c8;margin:0 0 16px}
+  .hatblock .go{font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ac);text-decoration:none;border:1px solid var(--ac);padding:10px 18px;border-radius:40px;display:inline-block}
+  .hatblock .go:hover{background:var(--ac);color:#000}
+
+  /* BEFORE THE PEN NAMES (unchanged) */
+  .maker{background:linear-gradient(180deg,#000,#0c1019);padding:70px 0}
+  .maker h2{text-align:center;font-family:'Cinzel',Georgia,serif;font-size:28px;color:#fff;margin:0 0 6px}
+  .maker .kick{text-align:center;font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-bottom:34px}
+  .mgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:900px;margin:0 auto;padding:0 22px}
+  @media(max-width:640px){.mgrid{grid-template-columns:1fr}}
+  .mcard{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:26px 24px}
+  .mcard .ic{font-size:30px;display:block;margin-bottom:12px}
+  .mcard h3{font-family:'Cinzel',Georgia,serif;font-size:21px;color:#fff;margin:0 0 2px}
+  .mcard .role{font-family:Arial,Helvetica,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#cdb3e6;margin-bottom:12px}
+  .mcard p{font-size:15px;line-height:1.65;color:#d6cfc2;margin:0}
+
+  /* FINALE */
+  .finale{padding:72px 22px;text-align:center;background:linear-gradient(180deg,#0c1019,#121a2b)}
+  .finale .q{max-width:760px;margin:0 auto;font-family:'Cinzel',Georgia,serif;font-size:clamp(20px,3.2vw,26px);line-height:1.4;color:#fff}
+  .finale .q em{background:linear-gradient(90deg,#5fd6ff,#ffd56a,#ff8a6a);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:normal}
+  .finale h2{font-family:'Cinzel',Georgia,serif;font-size:26px;color:#fff;margin:24px 0 18px}
+  .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">THE <b>STORYTELLER</b></div>
+    <div class="navlinks">
+      <a href="index.html">← Three Worlds</a>
+      <a href="index.html#shelf">The Shelf</a>
+      <a href="index.html#newsletter">Newsletter</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO + QUOTE -->
+<header class="top">
+  <p class="eye">One mind · many hats</p>
+  <h1>I don't have a voice.<br>I have a wardrobe.</h1>
+  <div class="quote">
+    <p class="q1">Personality isn't who you are.</p>
+    <p class="q2">It's what you wear.</p>
+    <cite>— DJ</cite>
+  </div>
+</header>
+
+<!-- SPLIT: intro (left) + hats (right) -->
+<section class="split">
+  <div class="inner">
+
+    <div class="left">
+      <p>We each keep a closet of our selves. Most people spend a lifetime in a single outfit and call it identity. I learned to read the occasion and choose the cloth — the romantic, the futurist, the world-builder, the architect — and to hang the hat back up when the moment had passed.</p>
+      <p>I don't write under pen names because I'm hiding. I write under pen names because I own many hats, and each one sees a truth the others can't.</p>
+      <p class="lead-in">These are the hats.</p>
+    </div>
+
+    <div class="right">
+
+      <div class="hatblock" style="--ac:var(--vesper)">
+        <div class="frame"><img src="hats/vesper.png" alt="Vesper Locke — the science-fiction hat"></div>
+        <h3>Vesper Locke</h3>
+        <p class="g">The Futurist's Hat · Science Fiction</p>
+        <p class="d">For the cold, clear future — where bodies become data, cities run on control, and rebellion learns to speak in code, motion, and the things a system can't delete.</p>
+        <a class="go" href="worlds/vesper-locke.html">Enter this world →</a>
+      </div>
+
+      <div class="hatblock" style="--ac:var(--eveline)">
+        <div class="frame"><img src="hats/eveline.png" alt="Eveline Cross — the portal-fantasy hat"></div>
+        <h3>Eveline Cross</h3>
+        <p class="g">The Wonder Hat · Portal Fantasy</p>
+        <p class="d">For the doors between worlds and the price of walking through one — found family, costly magic, and ordinary people handed extraordinary, dangerous stakes.</p>
+        <a class="go" href="worlds/eveline-cross.html">Enter this world →</a>
+      </div>
+
+      <div class="hatblock" style="--ac:var(--mira)">
+        <div class="frame"><img src="hats/mira.png" alt="Mira Lavelle — the gothic-romance hat"></div>
+        <h3>Mira Lavelle</h3>
+        <p class="g">The Romantic's Hat · Gothic Romance</p>
+        <p class="d">For the way love rewrites a life, and the secrets that refuse to stay buried — atmospheric stories about women who will not be authored by anyone but themselves.</p>
+        <a class="go" href="worlds/mira-lavelle.html">Enter this world →</a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- BEFORE THE PEN NAMES (unchanged) -->
+<section class="maker">
+  <p class="kick">Before the pen names</p>
+  <h2>The same mind wore these</h2>
+  <div class="mgrid">
+    <div class="mcard">
+      <span class="ic">🏛️</span>
+      <h3>The Architect</h3>
+      <div class="role">Enterprise &amp; Solution Design</div>
+      <p>Two decades walking into billion-dollar tangles of systems and finding the single clean structure hiding inside the chaos. I build the invisible scaffolding that moves global enterprises.</p>
+    </div>
+    <div class="mcard">
+      <span class="ic">🔗</span>
+      <h3>The Translator</h3>
+      <div class="role">Data &amp; Integration</div>
+      <p>Fluent in both finance and machine. I take a hundred messy, contradictory sources and make them tell one true, reconciled story — the line between noise and trusted truth.</p>
+    </div>
+    <div class="mcard">
+      <span class="ic">⚙️</span>
+      <h3>The Engineer</h3>
+      <div class="role">Trained to Build</div>
+      <p>An engineer by training, taught to build things that don't break. That discipline lives under the daydreaming — structure beneath the spell, rules beneath the wonder.</p>
+    </div>
+    <div class="mcard">
+      <span class="ic">🌍</span>
+      <h3>The Bridge-Builder</h3>
+      <div class="role">Global Teams &amp; Change</div>
+      <p>Led people across continents, languages, and the upheaval of mergers and transformations. Wonder is good; shipping is better. Every story was first a thing I had to deliver.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINALE -->
+<section class="finale">
+  <p class="q">If you've read the books, you've already met the architect: the <em>bridges between worlds</em>, the <em>city run on data</em>, the <em>woman who authenticates the truth.</em></p>
+  <h2>Many hats. One storyteller.</h2>
+  <div class="cta">
+    <a class="btn primary" href="index.html#shelf">Browse the Shelf</a>
+    <a class="btn ghost" href="index.html#newsletter">Join the Newsletter</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    THREE WORLDS · Vesper Locke · Eveline Cross · Mira Lavelle
+    <p class="note">Personality isn't who you are. It's what you wear.</p>
+  </div>
+</footer>
+
+</body>
+</html>

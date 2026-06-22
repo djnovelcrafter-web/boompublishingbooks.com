@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vesper Locke — Science Fiction &amp; Space Opera</title>
+<meta name="description" content="Vesper Locke writes cold, kinetic science fiction and space opera about bodies, systems, and the cost of being counted. The Opponent and The Code We Write in Fire.">
+<link rel="stylesheet" href="../css/site.css">
+</head>
+<body class="world-vesper">
+
+<nav>
+  <div class="wrap">
+    <div class="brand">VESPER <b>LOCKE</b></div>
+    <div class="navlinks">
+      <a href="../index.html">← All Worlds</a>
+      <a href="#books">Books</a>
+      <a href="#about">About</a>
+      <a href="#newsletter">Newsletter</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="stars"></div>
+  <div class="wrap" style="padding:72px 22px 64px;text-align:center">
+    <p class="reyebrow">Science Fiction · Space Opera</p>
+    <h1 class="rtitle" style="font-size:54px">Vesper Locke</h1>
+    <p class="lead" style="margin-top:18px">Cold, kinetic, morally serious science fiction — where bodies become data, excellence becomes propaganda, and rebellion is something you do with your hands.</p>
+    <div class="rcta" style="justify-content:center;margin-top:24px"><a class="btn primary" href="#books">Browse the books</a></div>
+  </div>
+</header>
+
+<section id="books">
+  <div class="wrap">
+    <p class="kicker">The Vesper Locke Shelf</p>
+    <h2>Science Fiction</h2>
+    <div id="shelfgrid" style="margin-top:24px"></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap blurb">
+    <p class="kicker">About Vesper Locke</p>
+    <h2>The author behind the SF</h2>
+    <p>Vesper Locke writes science fiction about the machinery of control and the people who refuse to be optimized away. Expect precise, propulsive prose, hard moral stakes, ensemble casts you'd run a kill-lane for, and climaxes built to feel both enormous and human.</p>
+    <p class="turn">If you love Red Rising, The Expanse, and spectacle turned into resistance — this is your world.</p>
+  </div>
+</section>
+
+<section id="newsletter">
+  <div class="wrap news">
+    <p class="kicker">Sci-Fi Only</p>
+    <h2>Get the next Vesper Locke book</h2>
+    <p style="margin-top:10px">One list, sci-fi only. I'll email you when there's a new Vesper Locke release — nothing else.</p>
+    <form onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';">
+      <input type="email" placeholder="your@email.com" required>
+      <button class="btn primary" type="submit">Notify me</button>
+    </form>
+    <p class="ok" style="display:none;color:var(--gold);margin-top:12px">You're on the Vesper Locke list.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">VESPER LOCKE · Science Fiction · part of <a href="../index.html">Three Worlds</a></div>
+</footer>
+
+<script>window.ASSET_PREFIX='../';</script>
+<script src="../css/books.js"></script>
+<script>renderShelf('#shelfgrid', {filter:function(b){return b.world==='vesper';}});</script>
+</body>
+</html>

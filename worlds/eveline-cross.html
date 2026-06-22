@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eveline Cross — Portal Fantasy &amp; Adventure</title>
+<meta name="description" content="Eveline Cross writes portal-fantasy adventure with heart: ordinary people who step through impossible doors into extraordinary stakes. The Bridge-Walker trilogy.">
+<link rel="stylesheet" href="../css/site.css">
+</head>
+<body class="world-eveline">
+
+<nav>
+  <div class="wrap">
+    <div class="brand">EVELINE <b>CROSS</b></div>
+    <div class="navlinks">
+      <a href="../index.html">← All Worlds</a>
+      <a href="#books">Books</a>
+      <a href="#about">About</a>
+      <a href="#newsletter">Newsletter</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="stars"></div>
+  <div class="wrap" style="padding:72px 22px 64px;text-align:center">
+    <p class="reyebrow">Portal Fantasy · Adventure</p>
+    <h1 class="rtitle" style="font-size:54px">Eveline Cross</h1>
+    <p class="lead" style="margin-top:18px">Doorways between worlds, found family, and ordinary kids handed extraordinary stakes — adventure with wonder, danger, and heart.</p>
+    <div class="rcta" style="justify-content:center;margin-top:24px"><a class="btn primary" href="#books">Browse the books</a></div>
+  </div>
+</header>
+
+<section id="books">
+  <div class="wrap">
+    <p class="kicker">The Eveline Cross Shelf</p>
+    <h2>Portal Fantasy</h2>
+    <div id="shelfgrid" style="margin-top:24px"></div>
+    <p class="comps" style="margin-top:28px"><strong>The Bridge-Walker</strong> is a trilogy in progress — Book One, <em>The Accidental Nexus</em>, is here; Book Two, <em>The Mirage Queen</em>, is complete and releasing September 2026; Book Three, <em>The Convergence</em>, is on the way.</p>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap blurb">
+    <p class="kicker">About Eveline Cross</p>
+    <h2>The author behind the doorways</h2>
+    <p>Eveline Cross writes portal-fantasy adventure about thresholds — the bridges, doors, and seams where one world spills into another, and the unlikely people who learn to walk between them. Expect fast wonder, real peril, found family, and worlds you'll want to stay lost in.</p>
+    <p class="turn">For readers who never stopped looking for the door at the back of the wardrobe.</p>
+  </div>
+</section>
+
+<section id="newsletter">
+  <div class="wrap news">
+    <p class="kicker">Fantasy Only</p>
+    <h2>Get the next Eveline Cross book</h2>
+    <p style="margin-top:10px">Be first to cross the next bridge — I'll email you when there's a new Eveline Cross release.</p>
+    <form onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';">
+      <input type="email" placeholder="your@email.com" required>
+      <button class="btn primary" type="submit">Notify me</button>
+    </form>
+    <p class="ok" style="display:none;color:var(--gold);margin-top:12px">You're on the Eveline Cross list.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">EVELINE CROSS · Portal Fantasy · part of <a href="../index.html">Three Worlds</a></div>
+</footer>
+
+<script>window.ASSET_PREFIX='../';</script>
+<script src="../css/books.js"></script>
+<script>renderShelf('#shelfgrid', {filter:function(b){return b.world==='eveline';}});</script>
+</body>
+</html>
