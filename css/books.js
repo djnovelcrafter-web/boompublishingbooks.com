@@ -76,7 +76,7 @@
     {
       slug:'when-i-see-through-you', title:'When I See Through You', sub:'A novel',
       pen:'Mira Lavelle', world:'mira', genre:'Historical Romance', status:'live',
-      hook:'A Georgia girl whose dead sweetheart isn’t dead, and the half of a sacred jade medallion that lets her see through his eyes across a war she’ll cross the world to win — and a hundred-year prophecy that asks her, in the end, to let it go.',
+      hook:'A bright Georgia belle, the quiet boy who is the only one to truly see her, and half of a jade heirloom that remembers more than anyone alive — a sweeping, slow-burn WWII love story about how far the heart will travel to find its way home.',
       cover:{img:'when-i-see-through-you.png'},
       link:'books/when-i-see-through-you/index.html'
     }
