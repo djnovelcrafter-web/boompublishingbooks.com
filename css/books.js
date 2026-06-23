@@ -19,14 +19,14 @@
     },
     {
       slug:'the-code-we-write-in-fire', title:'The Code We Write in Fire', sub:'Book One',
-      pen:'Vesper Locke', world:'vesper', genre:'Science Fiction', status:'live',
+      pen:'Vesper Locke', world:'vesper', genre:'Science Fiction', status:'live', rot:1,
       hook:'She deleted feeling from an entire city — then a poem the system can’t erase begins broadcasting the voice of the lover she condemned.',
       cover:{img:'the-code-we-write-in-fire.png'},
       link:'books/the-code-we-write-in-fire/index.html'
     },
     {
       slug:'the-bridge-walker', title:'The Accidental Nexus', sub:'The Bridge-Walker · Book One',
-      pen:'Eveline Cross', world:'eveline', genre:'Portal Fantasy', status:'live',
+      pen:'Eveline Cross', world:'eveline', genre:'Portal Fantasy', status:'live', rot:3,
       hook:'A college student becomes a living gateway between worlds, and every door she opens costs her another piece of her memory.',
       cover:{img:'accidental-nexus.png'},
       link:'books/the-accidental-nexus/index.html'
@@ -61,7 +61,7 @@
     },
     {
       slug:'this-version-of-us', title:'This Version of Us', sub:'A novel',
-      pen:'Mira Lavelle', world:'mira', genre:'Contemporary Romance', status:'soon', release:'Sept 2026', stage:'Revised draft', feature:true,
+      pen:'Mira Lavelle', world:'mira', genre:'Contemporary Romance', status:'soon', release:'Sept 2026', stage:'Revised draft', feature:true, rot:4,
       hook:'Two doctoral students bound by visions of a shared life must learn that being known is not the same as being loved.',
       cover:{img:'this-version-of-us.png'},
       link:'books/this-version-of-us/index.html'
@@ -75,7 +75,7 @@
     },
     {
       slug:'when-i-see-through-you', title:'When I See Through You', sub:'A novel',
-      pen:'Mira Lavelle', world:'mira', genre:'Historical Romance', status:'live',
+      pen:'Mira Lavelle', world:'mira', genre:'Historical Romance', status:'live', rot:2,
       hook:'A bright Georgia belle, the quiet boy who is the only one to truly see her, and half of a jade heirloom that remembers more than anyone alive — a sweeping, slow-burn WWII love story about how far the heart will travel to find its way home.',
       cover:{img:'when-i-see-through-you.png'},
       link:'books/when-i-see-through-you/index.html'
@@ -142,12 +142,13 @@
   window.initRotation = function(sel, opts){
     opts=opts||{};
     var host=document.querySelector(sel); if(!host) return;
-    var list=window.BOOKS.filter(opts.filter||function(b){return b.status==='live'||b.feature;});
+    var list=window.BOOKS.filter(opts.filter||function(b){return b.status==='live'||b.feature;});list.sort(function(a,b){return (a.rot||99)-(b.rot||99);});
     var slides=list.map(function(b){
       return '<div class="slide" data-world="'+b.world+'">'
         +'<a class="rcover" href="'+P+b.link+'">'+window.coverHTML(b)+'</a>'
         +'<div class="rmeta">'
           +'<p class="reyebrow">'+esc(b.genre)+'</p>'
+          +(b.status!=='live'?'<p style="display:inline-block;margin:2px 0 8px;padding:5px 13px;border:1px solid #d9b46a;border-radius:999px;color:#d9b46a;font-family:Arial,Helvetica,sans-serif;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase">Coming soon'+(b.release?' &#183; '+esc(b.release):'')+'</p>':'')
           +'<h1 class="rtitle">'+esc(b.title)+'</h1>'
           +'<div class="rsub">'+esc(b.sub)+'</div>'
           +'<p class="rhook">'+esc(b.hook)+'</p>'
