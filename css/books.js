@@ -61,7 +61,7 @@
     },
     {
       slug:'this-version-of-us', title:'This Version of Us', sub:'A novel',
-      pen:'Mira Lavelle', world:'mira', genre:'Contemporary Romance', status:'soon', release:'Sept 2026', stage:'Revised draft',
+      pen:'Mira Lavelle', world:'mira', genre:'Contemporary Romance', status:'soon', release:'Sept 2026', stage:'Revised draft', feature:true,
       hook:'Two doctoral students bound by visions of a shared life must learn that being known is not the same as being loved.',
       cover:{img:'this-version-of-us.png'},
       link:'books/this-version-of-us/index.html'
@@ -142,7 +142,7 @@
   window.initRotation = function(sel, opts){
     opts=opts||{};
     var host=document.querySelector(sel); if(!host) return;
-    var list=window.BOOKS.filter(opts.filter||function(b){return b.status==='live';});
+    var list=window.BOOKS.filter(opts.filter||function(b){return b.status==='live'||b.feature;});
     var slides=list.map(function(b){
       return '<div class="slide" data-world="'+b.world+'">'
         +'<a class="rcover" href="'+P+b.link+'">'+window.coverHTML(b)+'</a>'
