@@ -158,15 +158,6 @@ section h2{font-size:30px;color:#fff;text-align:center;margin-bottom:6px}
 .reader .maxim{text-align:center;letter-spacing:.16em;color:#3a4458;font-family:Arial,sans-serif;font-size:13px;margin:3px 0}
 .samplenote{text-align:center;color:var(--muted);font-family:Arial,sans-serif;font-size:13px;margin-top:22px}
 
-/* ===== reviews ===== */
-.ratingline{text-align:center;color:var(--muted);font-family:Arial,sans-serif;font-size:15px;margin-bottom:26px}
-.ratingline b{color:var(--gold);font-size:22px}
-.quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:920px;margin:0 auto}
-@media(max-width:680px){.quotes{grid-template-columns:1fr}}
-blockquote{margin:0;background:color-mix(in srgb,var(--accent2) 6%,transparent);border:1px solid var(--line);border-radius:12px;padding:22px;font-size:16px;color:#e6e3da}
-blockquote .stars{color:var(--gold);letter-spacing:.2em;font-size:14px}
-blockquote .src{display:block;margin-top:12px;font-family:Arial,sans-serif;font-size:12px;letter-spacing:.10em;text-transform:uppercase;color:var(--accent);font-style:normal}
-
 /* ===== WIP / voting ===== */
 .wipgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:10px}
 @media(max-width:880px){.wipgrid{grid-template-columns:1fr}}
