@@ -104,10 +104,29 @@
 
   var STATUS={live:'Available',soon:'Coming soon',vote:'Help me choose'};
 
+  function href(u){return /^https?:\/\//.test(u||'')?u:P+u;}
+
+  function style(){
+    if(document.getElementById('book-action-styles')) return;
+    var s=document.createElement('style');
+    s.id='book-action-styles';
+    s.textContent='.tile{display:flex;flex-direction:column}.tile>a{color:inherit;text-decoration:none}.book-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.book-btn{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:8px 11px;border:1px solid rgba(217,180,106,.45);border-radius:999px;color:#f2dfad;text-decoration:none;font:700 11px/1 Arial,Helvetica,sans-serif;letter-spacing:.06em;text-transform:uppercase;background:rgba(0,0,0,.14)}.book-btn-primary{background:#d9b46a;color:#160f09;border-color:#d9b46a}';
+    document.head.appendChild(s);
+  }
+
+  function actions(b){
+    if(b.status!=='live') return '';
+    var h='<div class="book-actions">';
+    if(b.buy) h+='<a class="book-btn book-btn-primary" href="'+href(b.buy)+'">Buy from Publisher</a>';
+    h+='<a class="book-btn" href="'+href(b.sample||b.link)+'">Read Sample</a></div>';
+    return h;
+  }
+
   window.tileHTML = function(b){
-    return '<a class="tile" href="'+P+b.link+'" data-world="'+b.world+'" data-status="'+b.status+'">'
+    style();
+    return '<div class="tile" data-world="'+b.world+'" data-status="'+b.status+'"><a href="'+P+b.link+'">'
       +'<div class="tilecover"><span class="badge '+b.status+'">'+STATUS[b.status]+(b.release?' · '+esc(b.release):'')+'</span>'+window.coverHTML(b)+'</div>'
-      +'<div class="tilecap"><div class="t">'+esc(b.title)+'</div><div class="p">'+esc(b.pen)+' · '+esc(b.genre)+'</div>'+(b.stage?'<div class="p" style="font-size:11px;opacity:.65;margin-top:3px">'+esc(b.stage)+'</div>':'')+'</div></a>';
+      +'<div class="tilecap"><div class="t">'+esc(b.title)+'</div><div class="p">'+esc(b.pen)+' · '+esc(b.genre)+'</div>'+(b.stage?'<div class="p" style="font-size:11px;opacity:.65;margin-top:3px">'+esc(b.stage)+'</div>':'')+'</div></a>'+actions(b)+'</div>';
   };
 
   /* ---- shelf with optional filter chips ---- */
@@ -154,7 +173,7 @@
           +'<div class="rsub">'+esc(b.sub)+'</div>'
           +'<p class="rhook">'+esc(b.hook)+'</p>'
           +'<p class="rpen">a novel by '+esc(b.pen)+'</p>'
-          +'<div class="rcta"><a class="btn primary" href="'+P+b.link+'">Enter this book</a></div>'
+          +'<div class="rcta"><a class="btn primary" href="'+P+b.link+'">Enter this book</a>'+(b.buy?'<a class="btn ghost" href="'+href(b.buy)+'">Buy from Publisher</a>':'')+'</div>'
         +'</div></div>';
     }).join('');
     host.innerHTML='<div class="hero"><div class="stars"></div><div class="rstage" id="rstage">'+slides+'</div></div>'
