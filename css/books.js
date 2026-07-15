@@ -78,7 +78,8 @@
       pen:'Mira Lavelle', world:'mira', genre:'Historical Romance', status:'live', rot:2,
       hook:'A bright Georgia belle, the quiet boy who is the only one to truly see her, and half of a jade heirloom that remembers more than anyone alive — a sweeping, slow-burn WWII love story about how far the heart will travel to find its way home.',
       cover:{img:'when-i-see-through-you.png'},
-      link:'books/when-i-see-through-you/index.html'
+      link:'books/when-i-see-through-you/index.html',
+      buy:'https://shop.boompublishingbooks.com/products/when-i-see-through-you'
     }
   ];
 
