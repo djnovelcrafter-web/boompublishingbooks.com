@@ -46,40 +46,40 @@
       link:'books/the-living-blade/index.html'
     },
     {
-      slug:'ink-and-inheritance', title:'The Empress of Ink', sub:'Ink & Inheritance · Book One',
-      pen:'Mira Lavelle', world:'mira', genre:'Gothic Romantic Suspense', status:'soon', release:'Dec 2026', stage:'Edited &amp; proofed',
-      hook:'A rare-book empress authenticates a lost library and finds a forgery built for her hands alone — and 1886 letters that seem to know things she has never told anyone.',
-      cover:{img:'ink-and-inheritance.png'},
-      link:'books/the-empress-of-ink/index.html'
-    },
-    {
-      slug:'the-widows-ledger', title:'The Widow’s Ledger', sub:'Ink & Inheritance · Book Two',
-      pen:'Mira Lavelle', world:'mira', genre:'Gothic Romantic Suspense', status:'soon', release:'Jul 2027', stage:'Outlined',
-      hook:'A packet of forged Victorian papers surfaces beneath a widow’s winter rose — and the truth it was buried to hide could destroy the very women it was meant to protect.',
-      cover:{img:'the-widows-ledger.png'},
-      link:'books/the-widows-ledger/index.html'
+      slug:'when-i-see-through-you', title:'When I See Through You', sub:'A novel',
+      pen:'Mira Lavelle', world:'mira', genre:'WWII Historical Romance', status:'live', rot:2,
+      hook:'A bright Georgia belle, the quiet boy who is the only one to truly see her, and half of a jade heirloom that remembers more than anyone alive — a sweeping, slow-burn WWII love story about how far the heart will travel to find its way home.',
+      cover:{img:'when-i-see-through-you.png'},
+      link:'books/when-i-see-through-you/index.html',
+      buy:'https://shop.boompublishingbooks.com/products/when-i-see-through-you'
     },
     {
       slug:'this-version-of-us', title:'This Version of Us', sub:'A novel',
-      pen:'Mira Lavelle', world:'mira', genre:'Contemporary Romance', status:'soon', release:'Sept 2026', stage:'Revised draft', feature:true, rot:4,
+      pen:'Mira Lavelle', world:'mira', genre:'Contemporary Romance', status:'soon', release:'Sept 2026', feature:true, rot:4,
       hook:'Two doctoral students bound by visions of a shared life must learn that being known is not the same as being loved.',
       cover:{img:'this-version-of-us.png'},
       link:'books/this-version-of-us/index.html'
     },
     {
+      slug:'ink-and-inheritance', title:'The Empress of Ink', sub:'The Empress of Ink · Book One',
+      pen:'Mira Lavelle', world:'mira', genre:'Gothic Romantic Suspense', status:'soon', release:'Dec 2026',
+      hook:'A rare-book empress authenticates a lost library and finds a forgery built for her hands alone — and 1886 letters that seem to know things she has never told anyone.',
+      cover:{img:'ink-and-inheritance.png'},
+      link:'books/the-empress-of-ink/index.html'
+    },
+    {
+      slug:'the-widows-ledger', title:'The Widow’s Ledger', sub:'The Empress of Ink · Book Two',
+      pen:'Mira Lavelle', world:'mira', genre:'Gothic Romantic Suspense', status:'soon', release:'Jul 2027',
+      hook:'A packet of forged Victorian papers surfaces beneath a widow’s winter rose — and the truth it was buried to hide could destroy the very women it was meant to protect.',
+      cover:{img:'the-widows-ledger.png'},
+      link:'books/the-widows-ledger/index.html'
+    },
+    {
       slug:'no-ones-girl', title:'No One’s Girl', sub:'A novel',
-      pen:'Mira Lavelle', world:'mira', genre:'Medical Romance', status:'soon', release:'2028', stage:'First draft complete',
+      pen:'Mira Lavelle', world:'mira', genre:'Medical Romance', status:'soon', release:'2028',
       hook:'The world’s best heart surgeon hides a secret: her impossible genius was charted across her body twenty-five years ago — by the man now dying on her operating table.',
       cover:{img:'no-ones-girl.png'},
       link:'books/no-ones-girl/index.html'
-    },
-    {
-      slug:'when-i-see-through-you', title:'When I See Through You', sub:'A novel',
-      pen:'Mira Lavelle', world:'mira', genre:'Historical Romance', status:'live', rot:2,
-      hook:'A bright Georgia belle, the quiet boy who is the only one to truly see her, and half of a jade heirloom that remembers more than anyone alive — a sweeping, slow-burn WWII love story about how far the heart will travel to find its way home.',
-      cover:{img:'when-i-see-through-you.png'},
-      link:'books/when-i-see-through-you/index.html',
-      buy:'https://shop.boompublishingbooks.com/products/when-i-see-through-you'
     }
   ];
 
