@@ -19,7 +19,7 @@
     },
     {
       slug:'the-code-we-write-in-fire', title:'The Code We Write in Fire', sub:'Book One',
-      pen:'Vesper Locke', world:'vesper', genre:'Science Fiction', status:'live', rot:1,
+      pen:'Vesper Locke', world:'vesper', genre:'Science Fiction', status:'live', launch:'Releases August 13, 2026', rot:1,
       hook:'She deleted feeling from an entire city — then a poem the system can’t erase begins broadcasting the voice of the lover she condemned.',
       cover:{img:'the-code-we-write-in-fire.png'},
       link:'books/the-code-we-write-in-fire/index.html'
@@ -47,7 +47,7 @@
     },
     {
       slug:'when-i-see-through-you', title:'When I See Through You', sub:'A novel',
-      pen:'Mira Lavelle', world:'mira', genre:'WWII Historical Romance', status:'live', rot:2,
+      pen:'Mira Lavelle', world:'mira', genre:'WWII Historical Romance', status:'live', launch:'Releases August 15, 2026', rot:2,
       hook:'A bright Georgia belle, the quiet boy who is the only one to truly see her, and half of a jade heirloom that remembers more than anyone alive — a sweeping, slow-burn WWII love story about how far the heart will travel to find its way home.',
       cover:{img:'when-i-see-through-you.png'},
       link:'books/when-i-see-through-you/index.html',
@@ -125,7 +125,7 @@
   window.tileHTML = function(b){
     style();
     return '<div class="tile" data-world="'+b.world+'" data-status="'+b.status+'"><a href="'+P+b.link+'">'
-      +'<div class="tilecover"><span class="badge '+b.status+'">'+STATUS[b.status]+(b.release?' · '+esc(b.release):'')+'</span>'+window.coverHTML(b)+'</div>'
+      +'<div class="tilecover"><span class="badge '+b.status+'">'+(b.launch?esc(b.launch):STATUS[b.status]+(b.release?' · '+esc(b.release):''))+'</span>'+window.coverHTML(b)+'</div>'
       +'<div class="tilecap"><div class="t">'+esc(b.title)+'</div><div class="p">'+esc(b.pen)+' · '+esc(b.genre)+'</div>'+(b.stage?'<div class="p" style="font-size:11px;opacity:.65;margin-top:3px">'+esc(b.stage)+'</div>':'')+'</div></a>'+actions(b)+'</div>';
   };
 
@@ -168,7 +168,7 @@
         +'<a class="rcover" href="'+P+b.link+'">'+window.coverHTML(b)+'</a>'
         +'<div class="rmeta">'
           +'<p class="reyebrow">'+esc(b.genre)+'</p>'
-          +(b.status!=='live'?'<p style="display:inline-block;margin:2px 0 8px;padding:5px 13px;border:1px solid #d9b46a;border-radius:999px;color:#d9b46a;font-family:Arial,Helvetica,sans-serif;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase">Coming soon'+(b.release?' &#183; '+esc(b.release):'')+'</p>':'')
+          +(b.launch?'<p style="display:inline-block;margin:2px 0 8px;padding:5px 13px;border:1px solid #d9b46a;border-radius:999px;color:#d9b46a;font-family:Arial,Helvetica,sans-serif;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase">'+esc(b.launch)+'</p>':b.status!=='live'?'<p style="display:inline-block;margin:2px 0 8px;padding:5px 13px;border:1px solid #d9b46a;border-radius:999px;color:#d9b46a;font-family:Arial,Helvetica,sans-serif;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase">Coming soon'+(b.release?' &#183; '+esc(b.release):'')+'</p>':'')
           +'<h1 class="rtitle">'+esc(b.title)+'</h1>'
           +'<div class="rsub">'+esc(b.sub)+'</div>'
           +'<p class="rhook">'+esc(b.hook)+'</p>'
