@@ -22,7 +22,9 @@
       pen:'Vesper Locke', world:'vesper', genre:'Science Fiction', status:'live', launch:'Releases August 13, 2026', rot:1,
       hook:'She deleted feeling from an entire city — then a poem the system can’t erase begins broadcasting the voice of the lover she condemned.',
       cover:{img:'the-code-we-write-in-fire.png'},
-      link:'books/the-code-we-write-in-fire/index.html'
+      link:'books/the-code-we-write-in-fire/index.html',
+      buy:'https://shop.boompublishingbooks.com/products/the-code-we-write-in-fire',
+      amazon:'https://www.amazon.com/dp/B0H9V6FGSF'
     },
     {
       slug:'the-bridge-walker', title:'The Accidental Nexus', sub:'The Bridge-Walker · Book One',
@@ -51,7 +53,8 @@
       hook:'A bright Georgia belle, the quiet boy who is the only one to truly see her, and half of a jade heirloom that remembers more than anyone alive — a sweeping, slow-burn WWII love story about how far the heart will travel to find its way home.',
       cover:{img:'when-i-see-through-you.png'},
       link:'books/when-i-see-through-you/index.html',
-      buy:'https://shop.boompublishingbooks.com/products/when-i-see-through-you'
+      buy:'https://shop.boompublishingbooks.com/products/when-i-see-through-you',
+      amazon:'https://www.amazon.com/dp/B0H9X82MSN'
     },
     {
       slug:'this-version-of-us', title:'This Version of Us', sub:'A novel',
@@ -117,7 +120,8 @@
   function actions(b){
     if(b.status!=='live') return '';
     var h='<div class="book-actions">';
-    if(b.buy) h+='<a class="book-btn book-btn-primary" href="'+href(b.buy)+'">Buy from Publisher</a>';
+    if(b.amazon) h+='<a class="book-btn" href="'+href(b.amazon)+'" target="_blank" rel="noopener noreferrer">Pre-order on Amazon</a>';
+    if(b.buy) h+='<a class="book-btn book-btn-primary" href="'+href(b.buy)+'" target="_blank" rel="noopener noreferrer">Buy Direct — Support the Author</a>';
     h+='<a class="book-btn" href="'+href(b.sample||b.link)+'">Read Sample</a></div>';
     return h;
   }
@@ -173,7 +177,9 @@
           +'<div class="rsub">'+esc(b.sub)+'</div>'
           +'<p class="rhook">'+esc(b.hook)+'</p>'
           +'<p class="rpen">a novel by '+esc(b.pen)+'</p>'
-          +'<div class="rcta"><a class="btn primary" href="'+P+b.link+'">Enter this book</a>'+(b.buy?'<a class="btn ghost" href="'+href(b.buy)+'">Buy from Publisher</a>':'')+'</div>'
+          +'<div class="rcta"><a class="btn primary" href="'+P+b.link+'">Enter this book</a>'
+            +(b.amazon?'<a class="btn ghost" href="'+href(b.amazon)+'" target="_blank" rel="noopener noreferrer">Pre-order on Amazon</a>':'')
+            +(b.buy?'<a class="btn ghost" href="'+href(b.buy)+'" target="_blank" rel="noopener noreferrer">Buy Direct — Support the Author</a>':'')+'</div>'
         +'</div></div>';
     }).join('');
     host.innerHTML='<div class="hero"><div class="stars"></div><div class="rstage" id="rstage">'+slides+'</div></div>'
