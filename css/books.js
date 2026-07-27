@@ -27,15 +27,17 @@
       amazon:'https://www.amazon.com/dp/B0H9V6FGSF'
     },
     {
-      slug:'the-bridge-walker', title:'The Accidental Nexus', sub:'The Bridge-Walker · Book One',
-      pen:'Eveline Cross', world:'eveline', genre:'Portal Fantasy', status:'live', rot:3,
+      slug:'the-bridge-walker', title:'The Accidental Nexus', sub:'Book One of The Bridge-Walker Trilogy',
+      pen:'Eveline Cross', world:'eveline', genre:'Portal Fantasy', status:'soon', release:'August 20, 2026', launch:'Coming August 20, 2026', feature:true, rot:3,
       hook:'A college student becomes a living gateway between worlds, and every door she opens costs her another piece of her memory.',
       cover:{img:'accidental-nexus.png'},
-      link:'books/the-accidental-nexus/index.html'
+      link:'books/the-accidental-nexus/index.html',
+      amazonSoon:true,
+      directSoon:true
     },
     {
       slug:'the-mirage-queen', title:'The Mirage Queen', sub:'The Bridge-Walker · Book Two',
-      pen:'Eveline Cross', world:'eveline', genre:'Portal Fantasy', status:'soon', release:'Sept 2026', stage:'First draft',
+      pen:'Eveline Cross', world:'eveline', genre:'Portal Fantasy', status:'soon', release:'October 2026', launch:'Coming October 2026', stage:'First draft',
       hook:'Awakened as the living Nexus and treated like a bomb that has not gone off, Lina is offered the one thing no one else will give her — relief — and crowns herself the Mirage Queen to become uncageable. The rescue her family is racing to attempt is exactly what the enemy planned.',
       cover:{img:'the-mirage-queen.png'},
       link:'books/the-mirage-queen/index.html'
@@ -113,15 +115,17 @@
     if(document.getElementById('book-action-styles')) return;
     var s=document.createElement('style');
     s.id='book-action-styles';
-    s.textContent='.tile{display:flex;flex-direction:column}.tile>a{color:inherit;text-decoration:none}.book-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.book-btn{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:8px 11px;border:1px solid rgba(217,180,106,.45);border-radius:999px;color:#f2dfad;text-decoration:none;font:700 11px/1 Arial,Helvetica,sans-serif;letter-spacing:.06em;text-transform:uppercase;background:rgba(0,0,0,.14)}.book-btn-primary{background:#d9b46a;color:#160f09;border-color:#d9b46a}';
+    s.textContent='.tile{display:flex;flex-direction:column}.tile>a{color:inherit;text-decoration:none}.book-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.book-btn{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:8px 11px;border:1px solid rgba(217,180,106,.45);border-radius:999px;color:#f2dfad;text-decoration:none;font:700 11px/1 Arial,Helvetica,sans-serif;letter-spacing:.06em;text-transform:uppercase;background:rgba(0,0,0,.14)}.book-btn-primary{background:#d9b46a;color:#160f09;border-color:#d9b46a}.book-btn.is-disabled{opacity:.55;cursor:not-allowed;pointer-events:none;border-style:dashed}.book-btn-primary.is-disabled{background:rgba(217,180,106,.16);color:#d8caa8}';
     document.head.appendChild(s);
   }
 
   function actions(b){
-    if(b.status!=='live') return '';
+    if(b.status!=='live'&&!b.amazonSoon&&!b.directSoon) return '';
     var h='<div class="book-actions">';
     if(b.amazon) h+='<a class="book-btn" href="'+href(b.amazon)+'" target="_blank" rel="noopener noreferrer">Pre-order on Amazon</a>';
+    if(b.amazonSoon) h+='<span class="book-btn is-disabled" aria-disabled="true">Amazon Pre-order Coming Soon</span>';
     if(b.buy) h+='<a class="book-btn book-btn-primary" href="'+href(b.buy)+'" target="_blank" rel="noopener noreferrer">Buy Direct — Support the Author</a>';
+    if(b.directSoon) h+='<span class="book-btn book-btn-primary is-disabled" aria-disabled="true">Direct Paperback Coming Soon</span>';
     h+='<a class="book-btn" href="'+href(b.sample||b.link)+'">Read Sample</a></div>';
     return h;
   }
@@ -179,7 +183,10 @@
           +'<p class="rpen">a novel by '+esc(b.pen)+'</p>'
           +'<div class="rcta"><a class="btn primary" href="'+P+b.link+'">Enter this book</a>'
             +(b.amazon?'<a class="btn ghost" href="'+href(b.amazon)+'" target="_blank" rel="noopener noreferrer">Pre-order on Amazon</a>':'')
-            +(b.buy?'<a class="btn ghost" href="'+href(b.buy)+'" target="_blank" rel="noopener noreferrer">Buy Direct — Support the Author</a>':'')+'</div>'
+            +(b.amazonSoon?'<span class="btn ghost is-disabled" aria-disabled="true">Amazon Pre-order Coming Soon</span>':'')
+            +(b.buy?'<a class="btn ghost" href="'+href(b.buy)+'" target="_blank" rel="noopener noreferrer">Buy Direct — Support the Author</a>':'')
+            +(b.directSoon?'<span class="btn primary is-disabled" aria-disabled="true">Direct Paperback Coming Soon</span>':'')
+          +'</div>'
         +'</div></div>';
     }).join('');
     host.innerHTML='<div class="hero"><div class="stars"></div><div class="rstage" id="rstage">'+slides+'</div></div>'
