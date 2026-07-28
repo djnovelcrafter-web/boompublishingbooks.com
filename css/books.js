@@ -36,10 +36,10 @@
       directSoon:true
     },
     {
-      slug:'the-mirage-queen', title:'The Mirage Queen', sub:'The Bridge-Walker · Book Two',
+      slug:'the-mirage-queen', title:'The Mirage Queen', sub:'Book Two of The Bridge-Walker Trilogy',
       pen:'Eveline Cross', world:'eveline', genre:'Portal Fantasy', status:'soon', release:'October 2026', launch:'Coming October 2026', stage:'First draft',
       hook:'Awakened as the living Nexus and treated like a bomb that has not gone off, Lina is offered the one thing no one else will give her — relief — and crowns herself the Mirage Queen to become uncageable. The rescue her family is racing to attempt is exactly what the enemy planned.',
-      cover:{img:'the-mirage-queen.png'},
+      cover:{img:'the-mirage-queen-cover.webp'},
       link:'books/the-mirage-queen/index.html'
     },
     {
