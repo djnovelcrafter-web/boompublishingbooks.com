@@ -56,7 +56,8 @@
       cover:{img:'when-i-see-through-you.png'},
       link:'books/when-i-see-through-you/index.html',
       buy:'https://shop.boompublishingbooks.com/products/when-i-see-through-you',
-      amazon:'https://www.amazon.com/dp/B0H9X82MSN'
+      amazon:'https://www.amazon.com/dp/B0H9X82MSN',
+      preview:'https://storyoriginapp.com/giveaways/019f8749-db63-75a8-9cf1-88dfc85b53f5?bundleId=019f139b-6873-7deb-869c-a40a1d1c0d2f&bundleLinkId=2FtlBm5'
     },
     {
       slug:'this-version-of-us', title:'This Version of Us', sub:'A novel',
@@ -126,6 +127,7 @@
     if(b.amazonSoon) h+='<span class="book-btn is-disabled" aria-disabled="true">Amazon Pre-order Coming Soon</span>';
     if(b.buy) h+='<a class="book-btn book-btn-primary" href="'+href(b.buy)+'" target="_blank" rel="noopener noreferrer">Buy Direct — Support the Author</a>';
     if(b.directSoon) h+='<span class="book-btn book-btn-primary is-disabled" aria-disabled="true">Direct Paperback Coming Soon</span>';
+    if(b.preview) h+='<a class="book-btn" href="'+href(b.preview)+'" target="_blank" rel="noopener noreferrer" aria-label="Read the first three chapters of When I See Through You free">📖 Read the First 3 Chapters FREE</a>';
     h+='<a class="book-btn" href="'+href(b.sample||b.link)+'">Read Sample</a></div>';
     return h;
   }
@@ -186,6 +188,7 @@
             +(b.amazonSoon?'<span class="btn ghost is-disabled" aria-disabled="true">Amazon Pre-order Coming Soon</span>':'')
             +(b.buy?'<a class="btn ghost" href="'+href(b.buy)+'" target="_blank" rel="noopener noreferrer">Buy Direct — Support the Author</a>':'')
             +(b.directSoon?'<span class="btn primary is-disabled" aria-disabled="true">Direct Paperback Coming Soon</span>':'')
+            +(b.preview?'<a class="btn ghost" href="'+href(b.preview)+'" target="_blank" rel="noopener noreferrer" aria-label="Read the first three chapters of When I See Through You free">📖 Read the First 3 Chapters FREE</a>':'')
           +'</div>'
         +'</div></div>';
     }).join('');
