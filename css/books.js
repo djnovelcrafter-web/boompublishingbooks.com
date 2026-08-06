@@ -12,14 +12,14 @@
   window.BOOKS = [
     {
       slug:'the-opponent', title:'The Opponent', sub:'Book One',
-      pen:'Vesper Locke', world:'vesper', genre:'Science Fiction', status:'soon', release:'Dec 2026', stage:'First draft',
+      pen:'Vesper Locke', world:'vesper', genre:'Science Fiction · Space Opera', status:'soon', release:'Dec 2026',
       hook:'The Commonwealth’s perfect athlete discovers the Games celebrating his excellence are camouflage for genocide — and turns sport into rebellion.',
       cover:{img:'the-opponent.png'},
       link:'books/the-opponent/index.html'
     },
     {
       slug:'the-code-we-write-in-fire', title:'The Code We Write in Fire', sub:'Book One',
-      pen:'Vesper Locke', world:'vesper', genre:'Science Fiction', status:'live', launch:'Releases August 13, 2026', rot:1,
+      pen:'Vesper Locke', world:'vesper', genre:'Science Fiction · Literary', status:'live', launch:'Releases August 13, 2026', rot:1,
       hook:'She deleted feeling from an entire city — then a poem the system can’t erase begins broadcasting the voice of the lover she condemned.',
       cover:{img:'the-code-we-write-in-fire.png'},
       link:'books/the-code-we-write-in-fire/index.html',
@@ -37,14 +37,14 @@
     },
     {
       slug:'the-mirage-queen', title:'The Mirage Queen', sub:'Book Two of The Bridge-Walker Trilogy',
-      pen:'Eveline Cross', world:'eveline', genre:'Portal Fantasy', status:'soon', release:'October 2026', launch:'Coming October 2026', stage:'First draft',
+      pen:'Eveline Cross', world:'eveline', genre:'Portal Fantasy', status:'soon', release:'October 2026', launch:'Coming October 2026',
       hook:'Awakened as the living Nexus and treated like a bomb that has not gone off, Lina is offered the one thing no one else will give her — relief — and crowns herself the Mirage Queen to become uncageable. The rescue her family is racing to attempt is exactly what the enemy planned.',
       cover:{img:'the-mirage-queen-cover.webp'},
       link:'books/the-mirage-queen/index.html'
     },
     {
       slug:'the-living-blade', title:'The Living Blade', sub:'A standalone novel',
-      pen:'Eveline Cross', world:'eveline', genre:'Dark Romantic Fantasy', status:'soon', release:'Mar 2027', stage:'First draft',
+      pen:'Eveline Cross', world:'eveline', genre:'Dark Romantic Fantasy', status:'soon', release:'Mar 2027',
       hook:'A desperate priestess summons a god forged for war in the shape of a man, and learns too late that loving him is the one thing that can unmake him.',
       cover:{img:'the-living-blade.png'},
       link:'books/the-living-blade/index.html'
@@ -61,7 +61,7 @@
     },
     {
       slug:'this-version-of-us', title:'This Version of Us', sub:'A novel',
-      pen:'Mira Lavelle', world:'mira', genre:'Contemporary Romance', status:'soon', release:'Sept 2026', feature:true, rot:4,
+      pen:'Mira Lavelle', world:'mira', genre:'Contemporary Romance · Magical Realism', status:'soon', release:'Sept 2026', feature:true, rot:4,
       hook:'Two doctoral students bound by visions of a shared life must learn that being known is not the same as being loved.',
       cover:{img:'this-version-of-us.png'},
       link:'books/this-version-of-us/index.html'
@@ -82,7 +82,7 @@
     },
     {
       slug:'no-ones-girl', title:'No One’s Girl', sub:'A novel',
-      pen:'Mira Lavelle', world:'mira', genre:'Medical Romance', status:'soon', release:'2028',
+      pen:'Mira Lavelle', world:'mira', genre:'Medical Gothic Romance · Dual Timeline', status:'soon', release:'2028',
       hook:'The world’s best heart surgeon hides a secret: her impossible genius was charted across her body twenty-five years ago — by the man now dying on her operating table.',
       cover:{img:'no-ones-girl.png'},
       link:'books/no-ones-girl/index.html'
