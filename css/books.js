@@ -28,12 +28,12 @@
     },
     {
       slug:'the-bridge-walker', title:'The Accidental Nexus', sub:'Book One of The Bridge-Walker Trilogy',
-      pen:'Eveline Cross', world:'eveline', genre:'Portal Fantasy', status:'soon', release:'August 20, 2026', launch:'Coming August 20, 2026', feature:true, rot:3,
+      pen:'Eveline Cross', world:'eveline', genre:'Portal Fantasy', status:'live', release:'August 20, 2026', launch:'Coming August 20, 2026', feature:true, rot:3,
       hook:'A college student becomes a living gateway between worlds, and every door she opens costs her another piece of her memory.',
       cover:{img:'accidental-nexus.png'},
       link:'books/the-accidental-nexus/index.html',
-      amazonSoon:true,
-      directSoon:true
+      buy:'https://shop.boompublishingbooks.com/products/the-accidental-nexus?variant=47657116434581',
+      amazon:'https://www.amazon.com/dp/B0H8XW34S2'
     },
     {
       slug:'the-mirage-queen', title:'The Mirage Queen', sub:'Book Two of The Bridge-Walker Trilogy',
@@ -123,12 +123,13 @@
   function actions(b){
     if(b.status!=='live'&&!b.amazonSoon&&!b.directSoon) return '';
     var h='<div class="book-actions">';
-    if(b.amazon) h+='<a class="book-btn" href="'+href(b.amazon)+'" target="_blank" rel="noopener noreferrer">Pre-order on Amazon</a>';
-    if(b.amazonSoon) h+='<span class="book-btn is-disabled" aria-disabled="true">Amazon Pre-order Coming Soon</span>';
-    if(b.buy) h+='<a class="book-btn book-btn-primary" href="'+href(b.buy)+'" target="_blank" rel="noopener noreferrer">Buy Direct — Support the Author</a>';
+    if(b.buy) h+='<a class="book-btn book-btn-primary" href="'+href(b.buy)+'" target="_blank" rel="noopener noreferrer">Buy from Boom Publishing Books</a>';
     if(b.directSoon) h+='<span class="book-btn book-btn-primary is-disabled" aria-disabled="true">Direct Paperback Coming Soon</span>';
+    if(b.amazon) h+='<a class="book-btn" href="'+href(b.amazon)+'" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>';
+    if(b.amazonSoon) h+='<span class="book-btn is-disabled" aria-disabled="true">Amazon Pre-order Coming Soon</span>';
+    h+='<a class="book-btn" href="'+href(b.sample||b.link)+'">Read Chapter One</a>';
     if(b.preview) h+='<a class="book-btn" href="'+href(b.preview)+'" target="_blank" rel="noopener noreferrer" aria-label="Read the first three chapters of When I See Through You free">📖 Read the First 3 Chapters FREE</a>';
-    h+='<a class="book-btn" href="'+href(b.sample||b.link)+'">Read Sample</a></div>';
+    h+='</div>';
     return h;
   }
 
@@ -184,10 +185,10 @@
           +'<p class="rhook">'+esc(b.hook)+'</p>'
           +'<p class="rpen">a novel by '+esc(b.pen)+'</p>'
           +'<div class="rcta"><a class="btn primary" href="'+P+b.link+'">Enter this book</a>'
-            +(b.amazon?'<a class="btn ghost" href="'+href(b.amazon)+'" target="_blank" rel="noopener noreferrer">Pre-order on Amazon</a>':'')
-            +(b.amazonSoon?'<span class="btn ghost is-disabled" aria-disabled="true">Amazon Pre-order Coming Soon</span>':'')
-            +(b.buy?'<a class="btn ghost" href="'+href(b.buy)+'" target="_blank" rel="noopener noreferrer">Buy Direct — Support the Author</a>':'')
+            +(b.buy?'<a class="btn ghost" href="'+href(b.buy)+'" target="_blank" rel="noopener noreferrer">Buy from Boom Publishing Books</a>':'')
             +(b.directSoon?'<span class="btn primary is-disabled" aria-disabled="true">Direct Paperback Coming Soon</span>':'')
+            +(b.amazon?'<a class="btn ghost" href="'+href(b.amazon)+'" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>':'')
+            +(b.amazonSoon?'<span class="btn ghost is-disabled" aria-disabled="true">Amazon Pre-order Coming Soon</span>':'')
             +(b.preview?'<a class="btn ghost" href="'+href(b.preview)+'" target="_blank" rel="noopener noreferrer" aria-label="Read the first three chapters of When I See Through You free">📖 Read the First 3 Chapters FREE</a>':'')
           +'</div>'
         +'</div></div>';

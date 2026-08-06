@@ -1,6 +1,6 @@
 (function(){
-  var label='Join Mira Lavelle’s Reader Community';
-  var ariaLabel='Join Mira Lavelle’s reader community';
+  var label="Join Mira Lavelle's Reader Community";
+  var ariaLabel="Join Mira Lavelle's reader community";
   var focusRequested=false;
 
   function focusMiraEmail(){
