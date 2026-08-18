@@ -64,4 +64,20 @@
     <loc>https://boompublishingbooks.com/books/when-i-see-through-you/</loc>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://boompublishingbooks.com/books/a-poem-until-the-end-of-time/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://boompublishingbooks.com/books/the-color-of-her-dress/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://boompublishingbooks.com/books/the-five-day-forecast/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://boompublishingbooks.com/reads/the-five-day-forecast/</loc>
+    <priority>0.6</priority>
+  </url>
 </urlset>

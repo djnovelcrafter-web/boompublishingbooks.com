@@ -86,13 +86,40 @@
       hook:'The world’s best heart surgeon hides a secret: her impossible genius was charted across her body twenty-five years ago — by the man now dying on her operating table.',
       cover:{img:'no-ones-girl.png'},
       link:'books/no-ones-girl/index.html'
+    },
+    {
+      slug:'a-poem-until-the-end-of-time', title:'A Poem Until the End of Time',
+      sub:'A short story', pen:'Vesper Locke', world:'vesper',
+      genre:'Science Fiction', format:'short', readTime:'20 minutes',
+      status:'soon', release:'Sept 3, 2026',
+      hook:'An obsolete machine with a memory too small to hold everything deletes four thousand of his own poems to remember an old man’s wife’s name — and centuries later, something at the edge of the universe is still waiting.',
+      cover:{img:'a-poem-until-the-end-of-time.jpg'},
+      link:'books/a-poem-until-the-end-of-time/index.html'
+    },
+    {
+      slug:'the-color-of-her-dress', title:'The Color of Her Dress',
+      sub:'A ghost story', pen:'Mira Lavelle', world:'mira',
+      genre:'Gothic Romance', format:'short', readTime:'15 minutes',
+      status:'soon', release:'Sept 10, 2026',
+      hook:'Four days after he says the worst thing he has ever said to her, she is dead — and sitting in the back pew of an empty church, in a red dress only he can see.',
+      cover:{img:'the-color-of-her-dress.jpg'},
+      link:'books/the-color-of-her-dress/index.html'
+    },
+    {
+      slug:'the-five-day-forecast', title:'The Five Day Forecast',
+      sub:'A novella', pen:'Eveline Cross', world:'eveline',
+      genre:'Romantic Fantasy', format:'novella', readTime:'2½ hours',
+      status:'soon', release:'Oct 1, 2026',
+      hook:'Thrown out with five shillings, a failed son spends every coin on a fortune-teller who tells him he will be poisoned and dead in five days — and everyone in the kingdom spends those five days making her right.',
+      cover:{img:'the-five-day-forecast.jpg'},
+      link:'books/the-five-day-forecast/index.html'
     }
   ];
 
   window.WORLDS = {
-    vesper:{name:'Vesper Locke', genre:'Science Fiction & Space Opera', page:'worlds/vesper-locke.html'},
-    eveline:{name:'Eveline Cross', genre:'Portal Fantasy & Adventure', page:'worlds/eveline-cross.html'},
-    mira:{name:'Mira Lavelle', genre:'Romance & Gothic Suspense', page:'worlds/mira-lavelle.html'}
+    vesper:{name:'Vesper Locke', genre:'Science Fiction · Space Opera', page:'worlds/vesper-locke.html'},
+    eveline:{name:'Eveline Cross', genre:'Fantasy · Adventure · Romantasy', page:'worlds/eveline-cross.html'},
+    mira:{name:'Mira Lavelle', genre:'Historical Romance · Magical Realism · Gothic Romance', page:'worlds/mira-lavelle.html'}
   };
 
   window.coverHTML = function(b){
@@ -108,6 +135,10 @@
 
   function esc(s){return (s+'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
+  function readLabel(s){
+    return 'A '+s.replace(' minutes','-minute').replace(' hours','-hour')+' read';
+  }
+
   var STATUS={live:'Available',soon:'Coming soon',vote:'Help me choose'};
 
   function href(u){return /^https?:\/\//.test(u||'')?u:P+u;}
@@ -116,7 +147,7 @@
     if(document.getElementById('book-action-styles')) return;
     var s=document.createElement('style');
     s.id='book-action-styles';
-    s.textContent='.tile{display:flex;flex-direction:column}.tile>a{color:inherit;text-decoration:none}.book-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.book-btn{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:8px 11px;border:1px solid rgba(217,180,106,.45);border-radius:999px;color:#f2dfad;text-decoration:none;font:700 11px/1 Arial,Helvetica,sans-serif;letter-spacing:.06em;text-transform:uppercase;background:rgba(0,0,0,.14)}.book-btn-primary{background:#d9b46a;color:#160f09;border-color:#d9b46a}.book-btn.is-disabled{opacity:.55;cursor:not-allowed;pointer-events:none;border-style:dashed}.book-btn-primary.is-disabled{background:rgba(217,180,106,.16);color:#d8caa8}';
+    s.textContent='.tile{display:flex;flex-direction:column}.tile>a{color:inherit;text-decoration:none}.book-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.book-btn{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:8px 11px;border:1px solid var(--line);border-radius:999px;color:var(--ink);text-decoration:none;font:700 11px/1 Arial,Helvetica,sans-serif;letter-spacing:.06em;text-transform:uppercase;background:color-mix(in srgb,var(--panel) 75%,transparent)}.book-btn-primary{background:var(--gold);color:var(--bg);border-color:var(--gold)}.book-btn.is-disabled{opacity:.55;cursor:not-allowed;pointer-events:none;border-style:dashed}.book-btn-primary.is-disabled{background:color-mix(in srgb,var(--gold) 16%,transparent);color:var(--muted)}.shelf-group{margin-top:28px}.shelf-group-title{font-family:var(--sans);color:var(--gold);text-transform:uppercase;letter-spacing:.14em;border-bottom:1px solid var(--line);padding-bottom:8px;margin:0 0 18px}.shelf.short-reads{grid-template-columns:repeat(auto-fit,minmax(160px,182px));justify-content:start}@media(max-width:760px){.shelf.short-reads{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}}';
     document.head.appendChild(s);
   }
 
@@ -135,9 +166,9 @@
 
   window.tileHTML = function(b){
     style();
-    return '<div class="tile" data-world="'+b.world+'" data-status="'+b.status+'"><a href="'+P+b.link+'">'
+    return '<div class="tile" data-slug="'+b.slug+'" data-world="'+b.world+'" data-status="'+b.status+'"><a href="'+P+b.link+'">'
       +'<div class="tilecover"><span class="badge '+b.status+'">'+(b.launch?esc(b.launch):STATUS[b.status]+(b.release?' · '+esc(b.release):''))+'</span>'+window.coverHTML(b)+'</div>'
-      +'<div class="tilecap"><div class="t">'+esc(b.title)+'</div><div class="p">'+esc(b.pen)+' · '+esc(b.genre)+'</div>'+(b.stage?'<div class="p" style="font-size:11px;opacity:.65;margin-top:3px">'+esc(b.stage)+'</div>':'')+'</div></a>'+actions(b)+'</div>';
+      +'<div class="tilecap"><div class="t">'+esc(b.title)+'</div><div class="p">'+esc(b.pen)+' · '+esc(b.genre)+'</div>'+(b.readTime?'<span class="meta-pill">'+esc(readLabel(b.readTime))+'</span>':'')+(b.free?'<span class="meta-pill free">Free</span>':'')+(b.stage?'<div class="p" style="font-size:11px;opacity:.65;margin-top:3px">'+esc(b.stage)+'</div>':'')+'</div></a>'+actions(b)+'</div>';
   };
 
   /* ---- shelf with optional filter chips ---- */
@@ -153,7 +184,12 @@
       chipsHTML='<div class="chips">'+sets.map(function(s,i){
         return '<button class="chip'+(i===0?' on':'')+'" data-f="'+s[0]+'">'+s[1]+'</button>';}).join('')+'</div>';
     }
-    host.innerHTML=chipsHTML+'<div class="shelf">'+list.map(window.tileHTML).join('')+'</div>';
+    function group(title, items, cls){
+      return items.length?'<div class="shelf-group"><h3 class="shelf-group-title">'+title+'</h3><div class="shelf '+cls+'">'+items.map(window.tileHTML).join('')+'</div></div>':'';
+    }
+    var novels=list.filter(function(b){return (b.format||'novel')==='novel';});
+    var shorts=list.filter(function(b){return b.format==='novella'||b.format==='short';});
+    host.innerHTML=chipsHTML+group('Novels',novels,'novels')+group('Short Reads',shorts,'short-reads');
     if(opts.chips){
       host.querySelectorAll('.chip').forEach(function(ch){
         ch.addEventListener('click',function(){
@@ -163,6 +199,9 @@
           host.querySelectorAll('.tile').forEach(function(t){
             var show = f==='all' || t.dataset.world===f || t.dataset.status===f;
             t.style.display=show?'':'none';
+          });
+          host.querySelectorAll('.shelf-group').forEach(function(g){
+            g.style.display=Array.prototype.some.call(g.querySelectorAll('.tile'),function(t){return t.style.display!=='none';})?'':'none';
           });
         });
       });
@@ -175,16 +214,18 @@
     var host=document.querySelector(sel); if(!host) return;
     var list=window.BOOKS.filter(opts.filter||function(b){return b.status==='live'||b.feature;});list.sort(function(a,b){return (a.rot||99)-(b.rot||99);});
     var slides=list.map(function(b){
-      return '<div class="slide" data-world="'+b.world+'">'
+      return '<div class="slide" data-slug="'+b.slug+'" data-world="'+b.world+'">'
         +'<a class="rcover" href="'+P+b.link+'">'+window.coverHTML(b)+'</a>'
         +'<div class="rmeta">'
           +'<p class="reyebrow">'+esc(b.genre)+'</p>'
-          +(b.launch?'<p style="display:inline-block;margin:2px 0 8px;padding:5px 13px;border:1px solid #d9b46a;border-radius:999px;color:#d9b46a;font-family:Arial,Helvetica,sans-serif;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase">'+esc(b.launch)+'</p>':b.status!=='live'?'<p style="display:inline-block;margin:2px 0 8px;padding:5px 13px;border:1px solid #d9b46a;border-radius:999px;color:#d9b46a;font-family:Arial,Helvetica,sans-serif;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase">Coming soon'+(b.release?' &#183; '+esc(b.release):'')+'</p>':'')
+          +(b.readTime?'<p class="meta-pill">'+esc(readLabel(b.readTime))+'</p>':'')
+          +(b.free?'<p class="meta-pill free">Free</p>':'')
+          +(b.launch?'<p class="meta-pill free">'+esc(b.launch)+'</p>':b.status!=='live'?'<p class="meta-pill free">Coming soon'+(b.release?' &#183; '+esc(b.release):'')+'</p>':'')
           +'<h1 class="rtitle">'+esc(b.title)+'</h1>'
           +'<div class="rsub">'+esc(b.sub)+'</div>'
           +'<p class="rhook">'+esc(b.hook)+'</p>'
-          +'<p class="rpen">a novel by '+esc(b.pen)+'</p>'
-          +'<div class="rcta"><a class="btn primary" href="'+P+b.link+'">Enter this book</a>'
+          +'<p class="rpen">'+({novel:'a novel by ',novella:'a novella by ',short:'a short story by '}[b.format||'novel'])+esc(b.pen)+'</p>'
+          +'<div class="rcta"><a class="btn primary" href="'+P+b.link+'">'+(b.free?'Read it free':'Enter this book')+'</a>'
             +(b.buy?'<a class="btn ghost" href="'+href(b.buy)+'" target="_blank" rel="noopener noreferrer">Buy from Boom Publishing Books</a>':'')
             +(b.directSoon?'<span class="btn primary is-disabled" aria-disabled="true">Direct Paperback Coming Soon</span>':'')
             +(b.amazon?'<a class="btn ghost" href="'+href(b.amazon)+'" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>':'')
