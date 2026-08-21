@@ -94,7 +94,8 @@
       status:'soon', release:'Sept 3, 2026',
       hook:'An obsolete machine with a memory too small to hold everything deletes four thousand of his own poems to remember an old man’s wife’s name — and centuries later, something at the edge of the universe is still waiting.',
       cover:{img:'a-poem-until-the-end-of-time.jpg'},
-      link:'books/a-poem-until-the-end-of-time/index.html'
+      link:'books/a-poem-until-the-end-of-time/index.html',
+      amazon:'https://www.amazon.com/dp/B0GXH474ZZ'
     },
     {
       slug:'the-color-of-her-dress', title:'The Color of Her Dress',
@@ -103,7 +104,8 @@
       status:'soon', release:'Sept 10, 2026',
       hook:'Four days after he says the worst thing he has ever said to her, she is dead — and sitting in the back pew of an empty church, in a red dress only he can see.',
       cover:{img:'the-color-of-her-dress.jpg'},
-      link:'books/the-color-of-her-dress/index.html'
+      link:'books/the-color-of-her-dress/index.html',
+      amazon:'https://www.amazon.com/dp/B0HFYLPRS7'
     },
     {
       slug:'the-five-day-forecast', title:'The Five Day Forecast',
@@ -152,13 +154,13 @@
   }
 
   function actions(b){
-    if(b.status!=='live'&&!b.amazonSoon&&!b.directSoon) return '';
+    if(b.status!=='live'&&!b.amazon&&!b.amazonSoon&&!b.directSoon) return '';
     var h='<div class="book-actions">';
     if(b.buy) h+='<a class="book-btn book-btn-primary" href="'+href(b.buy)+'" target="_blank" rel="noopener noreferrer">Buy from Boom Publishing Books</a>';
     if(b.directSoon) h+='<span class="book-btn book-btn-primary is-disabled" aria-disabled="true">Direct Paperback Coming Soon</span>';
     if(b.amazon) h+='<a class="book-btn" href="'+href(b.amazon)+'" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>';
     if(b.amazonSoon) h+='<span class="book-btn is-disabled" aria-disabled="true">Amazon Pre-order Coming Soon</span>';
-    h+='<a class="book-btn" href="'+href(b.sample||b.link)+'">Read Chapter One</a>';
+    if(b.status==='live'||b.sample) h+='<a class="book-btn" href="'+href(b.sample||b.link)+'">Read Chapter One</a>';
     if(b.preview) h+='<a class="book-btn" href="'+href(b.preview)+'" target="_blank" rel="noopener noreferrer" aria-label="Read the first three chapters of When I See Through You free">📖 Read the First 3 Chapters FREE</a>';
     h+='</div>';
     return h;
