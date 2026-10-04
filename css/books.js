@@ -60,11 +60,13 @@
       preview:'https://storyoriginapp.com/giveaways/019f8749-db63-75a8-9cf1-88dfc85b53f5?bundleId=019f139b-6873-7deb-869c-a40a1d1c0d2f&bundleLinkId=2FtlBm5'
     },
     {
-      slug:'this-version-of-us', title:'This Version of Us', sub:'A novel',
-      pen:'Mira Lavelle', world:'mira', genre:'Contemporary Romance · Magical Realism', status:'soon', release:'Sept 2026', feature:true, rot:4,
-      hook:'Two doctoral students bound by visions of a shared life must learn that being known is not the same as being loved.',
-      cover:{img:'this-version-of-us.png'},
-      link:'books/this-version-of-us/index.html'
+      slug:'the-lights-of-linden-falls', title:'The Lights of Linden Falls', sub:'Ten connected stories of holidays, home, and memory',
+      pen:'Mira Lavelle', world:'mira', genre:'Nostalgic Fiction · Holiday Stories', status:'soon', release:'October 22, 2026', launch:'Releases October 22, 2026', feature:true, rot:4,
+      hook:'Across generations, the people of Linden Falls gather beneath the same handmade star—carrying old hopes, unfinished promises, empty chairs, unexpected kindness, and the quiet courage to begin again.',
+      cover:{img:'the-lights-of-linden-falls.webp',alt:'Cover of The Lights of Linden Falls by Mira Lavelle, showing two children beneath a handmade illuminated star in a snowy town square.'},
+      link:'books/the-lights-of-linden-falls/index.html',
+      amazon:'https://www.amazon.com/dp/B0HLWYNYPC',
+      byline:'A collection by ', enterLabel:'Enter Linden Falls'
     },
     {
       slug:'ink-and-inheritance', title:'The Empress of Ink', sub:'The Empress of Ink · Book One',
@@ -126,7 +128,7 @@
 
   window.coverHTML = function(b){
     if(b.cover.img){
-      return '<img src="'+P+'covers/'+b.cover.img+'" alt="'+b.title+' cover" loading="lazy">';
+      return '<img src="'+P+'covers/'+b.cover.img+'" alt="'+esc(b.cover.alt||b.title+' cover')+'" loading="lazy">';
     }
     var c=b.cover.css;
     return '<div class="csscover '+c.cls+'">'
@@ -226,8 +228,8 @@
           +'<h1 class="rtitle">'+esc(b.title)+'</h1>'
           +'<div class="rsub">'+esc(b.sub)+'</div>'
           +'<p class="rhook">'+esc(b.hook)+'</p>'
-          +'<p class="rpen">'+({novel:'a novel by ',novella:'a novella by ',short:'a short story by '}[b.format||'novel'])+esc(b.pen)+'</p>'
-          +'<div class="rcta"><a class="btn primary" href="'+P+b.link+'">'+(b.free?'Read it free':'Enter this book')+'</a>'
+          +'<p class="rpen">'+(b.byline||{novel:'a novel by ',novella:'a novella by ',short:'a short story by '}[b.format||'novel'])+esc(b.pen)+'</p>'
+          +'<div class="rcta"><a class="btn primary" href="'+P+b.link+'">'+(b.enterLabel||(b.free?'Read it free':'Enter this book'))+'</a>'
             +(b.buy?'<a class="btn ghost" href="'+href(b.buy)+'" target="_blank" rel="noopener noreferrer">Buy from Boom Publishing Books</a>':'')
             +(b.directSoon?'<span class="btn primary is-disabled" aria-disabled="true">Direct Paperback Coming Soon</span>':'')
             +(b.amazon?'<a class="btn ghost" href="'+href(b.amazon)+'" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>':'')
