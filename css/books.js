@@ -118,13 +118,62 @@
       hook:'Thrown out with five shillings, a failed son spends every coin on a fortune-teller who tells him he will be poisoned and dead in five days — and everyone in the kingdom spends those five days making her right.',
       cover:{img:'the-five-day-forecast.jpg'},
       link:'books/the-five-day-forecast/index.html'
+    },
+    {
+      slug:'the-easy-large-print-variety-puzzle-book-for-seniors',
+      title:'The Easy Large-Print Variety Puzzle Book for Seniors',
+      sub:'2027 Edition', pen:'Boom Puzzle Books', world:'puzzles',
+      genre:'Large-Print Variety Puzzles', format:'puzzle',
+      status:'soon', release:'October 9, 2026', launch:'Coming October 9, 2026',
+      directSoon:true, directSoonLabel:'Buy from Boom Publishing Books — Coming Soon',
+      amazonSoon:true, amazonSoonLabel:'Buy on Amazon — Coming Soon',
+      hook:'100 one-page crosswords, word searches, word games, and brain teasers with complete solutions.',
+      cover:{img:'the-easy-large-print-variety-puzzle-book-for-seniors.jpg',alt:'Cover of The Easy Large-Print Variety Puzzle Book for Seniors, 2027 Edition.'},
+      link:'books/the-easy-large-print-variety-puzzle-book-for-seniors/index.html'
+    },
+    {
+      slug:'vacations-holidays-us-english',
+      title:'The Easy Large-Print Vacations and Holidays Variety Puzzle Book for Seniors',
+      sub:'US English Edition', pen:'Boom Puzzle Books', world:'puzzles',
+      genre:'Large-Print Variety Puzzles', format:'puzzle',
+      status:'soon', release:'October 22, 2026', launch:'Coming October 22, 2026',
+      directSoon:true, directSoonLabel:'Buy from Boom Publishing Books — Coming Soon',
+      amazonSoon:true, amazonSoonLabel:'Buy on Amazon — Coming Soon',
+      hook:'Premium full color. One puzzle per page. Complete solutions included.',
+      cover:{img:'vacations-holidays-us-english.jpg',alt:'Cover of The Easy Large-Print Vacations and Holidays Variety Puzzle Book for Seniors, US English Edition.'},
+      link:'books/vacations-holidays-us-english/index.html'
+    },
+    {
+      slug:'vacations-holidays-british-english',
+      title:'The Easy Large-Print Vacations and Holidays Variety Puzzle Book for Seniors',
+      sub:'British English Edition', pen:'Boom Puzzle Books', world:'puzzles',
+      genre:'Large-Print Variety Puzzles', format:'puzzle',
+      status:'soon', launch:'Release status to be confirmed',
+      directSoon:true, directSoonLabel:'Buy from Boom Publishing Books — Coming Soon',
+      amazonSoon:true, amazonSoonLabel:'Buy on Amazon — Coming Soon',
+      hook:'Premium full colour. One puzzle per page. Complete solutions included.',
+      cover:{img:'vacations-holidays-british-english.jpg',alt:'Cover of The Easy Large-Print Vacations and Holidays Variety Puzzle Book for Seniors, British English Edition.'},
+      link:'books/vacations-holidays-british-english/index.html'
+    },
+    {
+      slug:'vacaciones-celebraciones-spanish',
+      title:'El libro de pasatiempos variados en vacaciones y celebraciones en letra grande para mayores',
+      sub:'Edición en español', pen:'Boom Puzzle Books', world:'puzzles',
+      genre:'Pasatiempos variados en letra grande', format:'puzzle',
+      status:'soon', launch:'Estado de publicación por confirmar',
+      directSoon:true, directSoonLabel:'Comprar en Boom Publishing Books — Próximamente',
+      amazonSoon:true, amazonSoonLabel:'Comprar en Amazon — Próximamente',
+      hook:'100 actividades a todo color, una actividad por página y todas las respuestas incluidas.',
+      cover:{img:'vacaciones-celebraciones-spanish.jpg',alt:'Portada de El libro de pasatiempos variados en vacaciones y celebraciones en letra grande para mayores, edición en español.'},
+      link:'books/vacaciones-celebraciones-spanish/index.html'
     }
   ];
 
   window.WORLDS = {
     vesper:{name:'Vesper Locke', genre:'Science Fiction · Space Opera', page:'worlds/vesper-locke.html'},
     eveline:{name:'Eveline Cross', genre:'Fantasy · Adventure · Romantasy', page:'worlds/eveline-cross.html'},
-    mira:{name:'Mira Lavelle', genre:'Historical Romance · Magical Realism · Gothic Romance', page:'worlds/mira-lavelle.html'}
+    mira:{name:'Mira Lavelle', genre:'Historical Romance · Magical Realism · Gothic Romance', page:'worlds/mira-lavelle.html'},
+    puzzles:{name:'Boom Puzzle Books', genre:'Large-Print Puzzles', page:'worlds/boom-puzzle-books.html'}
   };
 
   window.coverHTML = function(b){
@@ -152,7 +201,7 @@
     if(document.getElementById('book-action-styles')) return;
     var s=document.createElement('style');
     s.id='book-action-styles';
-    s.textContent='.tile{display:flex;flex-direction:column}.tile>a{color:inherit;text-decoration:none}.book-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.book-btn{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:8px 11px;border:1px solid var(--line);border-radius:999px;color:var(--ink);text-decoration:none;font:700 11px/1 Arial,Helvetica,sans-serif;letter-spacing:.06em;text-transform:uppercase;background:color-mix(in srgb,var(--panel) 75%,transparent)}.book-btn-primary{background:var(--gold);color:var(--bg);border-color:var(--gold)}.book-btn.is-disabled{opacity:.55;cursor:not-allowed;pointer-events:none;border-style:dashed}.book-btn-primary.is-disabled{background:color-mix(in srgb,var(--gold) 16%,transparent);color:var(--muted)}.shelf-group{margin-top:28px}.shelf-group-title{font-family:var(--sans);color:var(--gold);text-transform:uppercase;letter-spacing:.14em;border-bottom:1px solid var(--line);padding-bottom:8px;margin:0 0 18px}.shelf.short-reads{grid-template-columns:repeat(auto-fit,minmax(160px,182px));justify-content:start}@media(max-width:760px){.shelf.short-reads{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}}';
+    s.textContent='.tile{display:flex;flex-direction:column}.tile>a{color:inherit;text-decoration:none}.tile[data-world="puzzles"] .tilecover img{object-fit:contain;background:#fff}.book-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.book-btn{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:8px 11px;border:1px solid var(--line);border-radius:999px;color:var(--ink);text-decoration:none;font:700 11px/1 Arial,Helvetica,sans-serif;letter-spacing:.06em;text-transform:uppercase;background:color-mix(in srgb,var(--panel) 75%,transparent)}.book-btn-primary{background:var(--gold);color:var(--bg);border-color:var(--gold)}.book-btn.is-disabled{opacity:.55;cursor:not-allowed;pointer-events:none;border-style:dashed}.book-btn-primary.is-disabled{background:color-mix(in srgb,var(--gold) 16%,transparent);color:var(--muted)}.shelf-group{margin-top:28px}.shelf-group-title{font-family:var(--sans);color:var(--gold);text-transform:uppercase;letter-spacing:.14em;border-bottom:1px solid var(--line);padding-bottom:8px;margin:0 0 18px}.shelf.short-reads{grid-template-columns:repeat(auto-fit,minmax(160px,182px));justify-content:start}@media(max-width:760px){.shelf.short-reads{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}}';
     document.head.appendChild(s);
   }
 
@@ -160,10 +209,11 @@
     if(b.status!=='live'&&!b.amazon&&!b.amazonSoon&&!b.directSoon) return '';
     var h='<div class="book-actions">';
     if(b.buy) h+='<a class="book-btn book-btn-primary" href="'+href(b.buy)+'" target="_blank" rel="noopener noreferrer">Buy from Boom Publishing Books</a>';
-    if(b.directSoon) h+='<span class="book-btn book-btn-primary is-disabled" aria-disabled="true">Direct Paperback Coming Soon</span>';
+    if(b.directSoon) h+='<span class="book-btn book-btn-primary is-disabled" aria-disabled="true">'+esc(b.directSoonLabel||'Direct Paperback Coming Soon')+'</span>';
     if(b.amazon) h+='<a class="book-btn" href="'+href(b.amazon)+'" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>';
-    if(b.amazonSoon) h+='<span class="book-btn is-disabled" aria-disabled="true">Amazon Pre-order Coming Soon</span>';
-    if(b.status==='live'||b.sample) h+='<a class="book-btn" href="'+href(b.sample||b.link)+'">Read Chapter One</a>';
+    if(b.amazonSoon) h+='<span class="book-btn is-disabled" aria-disabled="true">'+esc(b.amazonSoonLabel||'Amazon Pre-order Coming Soon')+'</span>';
+    if(b.sample) h+='<a class="book-btn" href="'+href(b.sample)+'">'+(b.format==='puzzle'?'View sample puzzles':'Read Chapter One')+'</a>';
+    else if(b.status==='live'&&b.format!=='puzzle') h+='<a class="book-btn" href="'+href(b.link)+'">Read Chapter One</a>';
     if(b.preview) h+='<a class="book-btn" href="'+href(b.preview)+'" target="_blank" rel="noopener noreferrer" aria-label="Read the first three chapters of When I See Through You free">📖 Read the First 3 Chapters FREE</a>';
     h+='</div>';
     return h;
@@ -184,7 +234,7 @@
     var chipsHTML='';
     if(opts.chips){
       var sets=[['all','All']].concat(
-        [['vesper','Sci-Fi'],['eveline','Fantasy'],['mira','Romance']],
+        [['vesper','Sci-Fi'],['eveline','Fantasy'],['mira','Romance'],['puzzles','Puzzles']],
         [['live','Available'],['soon','Coming soon']]);
       chipsHTML='<div class="chips">'+sets.map(function(s,i){
         return '<button class="chip'+(i===0?' on':'')+'" data-f="'+s[0]+'">'+s[1]+'</button>';}).join('')+'</div>';
@@ -194,7 +244,8 @@
     }
     var novels=list.filter(function(b){return (b.format||'novel')==='novel';});
     var shorts=list.filter(function(b){return b.format==='novella'||b.format==='short';});
-    host.innerHTML=chipsHTML+group('Novels',novels,'novels')+group('Short Reads',shorts,'short-reads');
+    var puzzles=list.filter(function(b){return b.format==='puzzle';});
+    host.innerHTML=chipsHTML+group('Novels',novels,'novels')+group('Short Reads',shorts,'short-reads')+group('Puzzle Books',puzzles,'puzzle-books');
     if(opts.chips){
       host.querySelectorAll('.chip').forEach(function(ch){
         ch.addEventListener('click',function(){
@@ -217,7 +268,7 @@
   window.initRotation = function(sel, opts){
     opts=opts||{};
     var host=document.querySelector(sel); if(!host) return;
-    var list=window.BOOKS.filter(opts.filter||function(b){return b.status==='live'||b.feature;});list.sort(function(a,b){return (a.rot||99)-(b.rot||99);});
+    var list=window.BOOKS.filter(opts.filter||function(b){return b.world!=='puzzles'&&(b.status==='live'||b.feature);});list.sort(function(a,b){return (a.rot||99)-(b.rot||99);});
     var slides=list.map(function(b){
       return '<div class="slide" data-slug="'+b.slug+'" data-world="'+b.world+'">'
         +'<a class="rcover" href="'+P+b.link+'">'+window.coverHTML(b)+'</a>'
@@ -229,12 +280,12 @@
           +'<h1 class="rtitle">'+esc(b.title)+'</h1>'
           +'<div class="rsub">'+esc(b.sub)+'</div>'
           +'<p class="rhook">'+esc(b.hook)+'</p>'
-          +'<p class="rpen">'+(b.byline||{novel:'a novel by ',novella:'a novella by ',short:'a short story by '}[b.format||'novel'])+esc(b.pen)+'</p>'
+          +'<p class="rpen">'+(b.byline||{novel:'a novel by ',novella:'a novella by ',short:'a short story by ',puzzle:'published by '}[b.format||'novel'])+esc(b.pen)+'</p>'
           +'<div class="rcta"><a class="btn primary" href="'+P+b.link+'">'+(b.enterLabel||(b.free?'Read it free':'Enter this book'))+'</a>'
             +(b.buy?'<a class="btn ghost" href="'+href(b.buy)+'" target="_blank" rel="noopener noreferrer">Buy from Boom Publishing Books</a>':'')
-            +(b.directSoon?'<span class="btn primary is-disabled" aria-disabled="true">Direct Paperback Coming Soon</span>':'')
+            +(b.directSoon?'<span class="btn primary is-disabled" aria-disabled="true">'+esc(b.directSoonLabel||'Direct Paperback Coming Soon')+'</span>':'')
             +(b.amazon?'<a class="btn ghost" href="'+href(b.amazon)+'" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>':'')
-            +(b.amazonSoon?'<span class="btn ghost is-disabled" aria-disabled="true">Amazon Pre-order Coming Soon</span>':'')
+            +(b.amazonSoon?'<span class="btn ghost is-disabled" aria-disabled="true">'+esc(b.amazonSoonLabel||'Amazon Pre-order Coming Soon')+'</span>':'')
             +(b.preview?'<a class="btn ghost" href="'+href(b.preview)+'" target="_blank" rel="noopener noreferrer" aria-label="Read the first three chapters of When I See Through You free">📖 Read the First 3 Chapters FREE</a>':'')
           +'</div>'
         +'</div></div>';

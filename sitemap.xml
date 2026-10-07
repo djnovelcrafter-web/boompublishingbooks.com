@@ -25,6 +25,10 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://boompublishingbooks.com/worlds/boom-puzzle-books.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://boompublishingbooks.com/books/the-opponent/</loc>
     <priority>0.7</priority>
   </url>
@@ -75,6 +79,22 @@
   <url>
     <loc>https://boompublishingbooks.com/books/the-five-day-forecast/</loc>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://boompublishingbooks.com/books/the-easy-large-print-variety-puzzle-book-for-seniors/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://boompublishingbooks.com/books/vacations-holidays-us-english/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://boompublishingbooks.com/books/vacations-holidays-british-english/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boompublishingbooks.com/books/vacaciones-celebraciones-spanish/</loc>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://boompublishingbooks.com/reads/the-five-day-forecast/</loc>
