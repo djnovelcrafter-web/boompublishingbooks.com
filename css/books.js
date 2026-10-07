@@ -65,6 +65,7 @@
       hook:'Across generations, the people of Linden Falls gather beneath the same handmade star—carrying old hopes, unfinished promises, empty chairs, unexpected kindness, and the quiet courage to begin again.',
       cover:{img:'the-lights-of-linden-falls.webp',alt:'Cover of The Lights of Linden Falls by Mira Lavelle, showing two children beneath a handmade illuminated star in a snowy town square.'},
       link:'books/the-lights-of-linden-falls/index.html',
+      buy:'https://shop.boompublishingbooks.com/products/the-lights-of-linden-falls-2?variant=67668086292629',
       amazon:'https://www.amazon.com/dp/B0HLWYNYPC',
       byline:'A collection by ', enterLabel:'Enter Linden Falls'
     },
