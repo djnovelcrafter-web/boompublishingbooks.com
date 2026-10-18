@@ -70,17 +70,17 @@
       byline:'A collection by ', enterLabel:'Enter Linden Falls'
     },
     {
-      slug:'ink-and-inheritance', title:'The Empress of Ink', sub:'The Empress of Ink · Book One',
+      slug:'ink-and-inheritance', title:'The Empress of Ink', sub:'Ink & Inheritance · Book One',
       pen:'Mira Lavelle', world:'mira', genre:'Gothic Romantic Suspense', status:'soon', release:'November 19, 2026', launch:'Coming November 19, 2026',
       hook:'A rare-book empress authenticates a lost library and finds a forgery built for her hands alone — and 1886 letters that seem to know things she has never told anyone.',
       cover:{img:'the-empress-of-ink-cover.jpg'},
       link:'books/the-empress-of-ink/index.html'
     },
     {
-      slug:'the-widows-ledger', title:'The Widow’s Ledger', sub:'The Empress of Ink · Book Two',
+      slug:'the-widows-ledger', title:'The Widow’s Ledger', sub:'Ink & Inheritance · Book Two',
       pen:'Mira Lavelle', world:'mira', genre:'Gothic Romantic Suspense', status:'soon', release:'Jul 2027',
       hook:'A packet of forged Victorian papers surfaces beneath a widow’s winter rose — and the truth it was buried to hide could destroy the very women it was meant to protect.',
-      cover:{img:'the-widows-ledger.png'},
+      cover:{img:'the-widows-ledger-cover.jpg'},
       link:'books/the-widows-ledger/index.html'
     },
     {
