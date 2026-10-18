@@ -12,14 +12,14 @@
   window.BOOKS = [
     {
       slug:'the-opponent', title:'The Opponent', sub:'Book One',
-      pen:'Vesper Locke', world:'vesper', genre:'Science Fiction · Space Opera', status:'soon', release:'Dec 2026',
+      pen:'Vesper Locke', world:'vesper', genre:'Science Fiction · Space Opera', status:'soon', release:'December 2027', launch:'Coming December 2027',
       hook:'The Commonwealth’s perfect athlete discovers the Games celebrating his excellence are camouflage for genocide — and turns sport into rebellion.',
       cover:{img:'the-opponent.png'},
       link:'books/the-opponent/index.html'
     },
     {
       slug:'the-code-we-write-in-fire', title:'The Code We Write in Fire', sub:'Book One',
-      pen:'Vesper Locke', world:'vesper', genre:'Science Fiction · Literary', status:'live', launch:'Releases August 13, 2026', rot:1,
+      pen:'Vesper Locke', world:'vesper', genre:'Science Fiction · Literary', status:'live', release:'August 13, 2026', launch:'Available now', rot:1,
       hook:'She deleted feeling from an entire city — then a poem the system can’t erase begins broadcasting the voice of the lover she condemned.',
       cover:{img:'the-code-we-write-in-fire.png'},
       link:'books/the-code-we-write-in-fire/index.html',
@@ -28,7 +28,7 @@
     },
     {
       slug:'the-bridge-walker', title:'The Accidental Nexus', sub:'Book One of The Bridge-Walker Trilogy',
-      pen:'Eveline Cross', world:'eveline', genre:'Portal Fantasy', status:'live', release:'August 20, 2026', launch:'Coming August 20, 2026', feature:true, rot:3,
+      pen:'Eveline Cross', world:'eveline', genre:'Portal Fantasy', status:'live', release:'August 20, 2026', launch:'Available now', feature:true, rot:3,
       hook:'A college student becomes a living gateway between worlds, and every door she opens costs her another piece of her memory.',
       cover:{img:'accidental-nexus.png'},
       link:'books/the-accidental-nexus/index.html',
@@ -37,7 +37,7 @@
     },
     {
       slug:'the-mirage-queen', title:'The Mirage Queen', sub:'Book Two of The Bridge-Walker Trilogy',
-      pen:'Eveline Cross', world:'eveline', genre:'Portal Fantasy', status:'soon', release:'October 2026', launch:'Coming October 2026',
+      pen:'Eveline Cross', world:'eveline', genre:'Portal Fantasy', status:'soon', release:'June 2027', launch:'Coming June 2027',
       hook:'Awakened as the living Nexus and treated like a bomb that has not gone off, Lina is offered the one thing no one else will give her — relief — and crowns herself the Mirage Queen to become uncageable. The rescue her family is racing to attempt is exactly what the enemy planned.',
       cover:{img:'the-mirage-queen-cover.webp'},
       link:'books/the-mirage-queen/index.html'
@@ -71,9 +71,9 @@
     },
     {
       slug:'ink-and-inheritance', title:'The Empress of Ink', sub:'The Empress of Ink · Book One',
-      pen:'Mira Lavelle', world:'mira', genre:'Gothic Romantic Suspense', status:'soon', release:'Dec 2026',
+      pen:'Mira Lavelle', world:'mira', genre:'Gothic Romantic Suspense', status:'soon', release:'November 19, 2026', launch:'Coming November 19, 2026',
       hook:'A rare-book empress authenticates a lost library and finds a forgery built for her hands alone — and 1886 letters that seem to know things she has never told anyone.',
-      cover:{img:'ink-and-inheritance.png'},
+      cover:{img:'the-empress-of-ink-cover.jpg'},
       link:'books/the-empress-of-ink/index.html'
     },
     {
@@ -94,7 +94,7 @@
       slug:'a-poem-until-the-end-of-time', title:'A Poem Until the End of Time',
       sub:'A short story', pen:'Vesper Locke', world:'vesper',
       genre:'Science Fiction', format:'short', readTime:'20 minutes',
-      status:'soon', release:'Sept 3, 2026',
+      status:'live', release:'September 3, 2026', launch:'Available now',
       hook:'An obsolete machine with a memory too small to hold everything deletes four thousand of his own poems to remember an old man’s wife’s name — and centuries later, something at the edge of the universe is still waiting.',
       cover:{img:'a-poem-until-the-end-of-time.jpg'},
       link:'books/a-poem-until-the-end-of-time/index.html',
@@ -104,7 +104,7 @@
       slug:'the-color-of-her-dress', title:'The Color of Her Dress',
       sub:'A ghost story', pen:'Mira Lavelle', world:'mira',
       genre:'Gothic Romance', format:'short', readTime:'15 minutes',
-      status:'soon', release:'Sept 10, 2026',
+      status:'live', release:'September 10, 2026', launch:'Available now',
       hook:'Four days after he says the worst thing he has ever said to her, she is dead — and sitting in the back pew of an empty church, in a red dress only he can see.',
       cover:{img:'the-color-of-her-dress.jpg'},
       link:'books/the-color-of-her-dress/index.html',
@@ -114,7 +114,7 @@
       slug:'the-five-day-forecast', title:'The Five Day Forecast',
       sub:'A novella', pen:'Eveline Cross', world:'eveline',
       genre:'Romantic Fantasy', format:'novella', readTime:'2½ hours',
-      status:'soon', release:'Oct 1, 2026',
+      status:'soon', release:'December 2026', launch:'Coming December 2026',
       hook:'Thrown out with five shillings, a failed son spends every coin on a fortune-teller who tells him he will be poisoned and dead in five days — and everyone in the kingdom spends those five days making her right.',
       cover:{img:'the-five-day-forecast.jpg'},
       link:'books/the-five-day-forecast/index.html'
