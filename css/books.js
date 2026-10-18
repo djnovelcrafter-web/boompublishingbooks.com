@@ -231,10 +231,25 @@
     opts=opts||{};
     var host=document.querySelector(sel); if(!host) return;
     var list=window.BOOKS.filter(opts.filter||function(){return true;});
+    var spotlightOrder={'the-lights-of-linden-falls':1,'ink-and-inheritance':2};
+    function releaseTime(b){
+      if(!b.release) return Number.MAX_SAFE_INTEGER;
+      var value=Date.parse(b.release.replace(/^late /i,''));
+      return isNaN(value)?Number.MAX_SAFE_INTEGER:value;
+    }
+    list=list.slice().sort(function(a,b){
+      var ar=spotlightOrder[a.slug]||99, br=spotlightOrder[b.slug]||99;
+      if(ar!==br) return ar-br;
+      if(a.status!==b.status) return a.status==='live'?-1:b.status==='live'?1:0;
+      return releaseTime(a)-releaseTime(b);
+    });
     var chipsHTML='';
     if(opts.chips){
+      var worldSets=[['vesper','Sci-Fi'],['eveline','Fantasy'],['mira','Romance'],['puzzles','Puzzles']].filter(function(s){
+        return list.some(function(b){return b.world===s[0];});
+      });
       var sets=[['all','All']].concat(
-        [['vesper','Sci-Fi'],['eveline','Fantasy'],['mira','Romance'],['puzzles','Puzzles']],
+        worldSets,
         [['live','Available'],['soon','Coming soon']]);
       chipsHTML='<div class="chips">'+sets.map(function(s,i){
         return '<button class="chip'+(i===0?' on':'')+'" data-f="'+s[0]+'">'+s[1]+'</button>';}).join('')+'</div>';
