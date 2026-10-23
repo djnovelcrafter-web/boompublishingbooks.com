@@ -61,7 +61,7 @@
     },
     {
       slug:'the-lights-of-linden-falls', title:'The Lights of Linden Falls', sub:'Ten connected stories of holidays, home, and memory',
-      pen:'Mira Lavelle', world:'mira', genre:'Nostalgic Fiction · Holiday Stories', status:'soon', release:'October 22, 2026', launch:'Releases October 22, 2026', feature:true, rot:4,
+      pen:'Mira Lavelle', world:'mira', genre:'Nostalgic Fiction · Holiday Stories', status:'live', release:'October 22, 2026', launch:'Available now', feature:true, rot:4,
       hook:'Across generations, the people of Linden Falls gather beneath the same handmade star—carrying old hopes, unfinished promises, empty chairs, unexpected kindness, and the quiet courage to begin again.',
       cover:{img:'the-lights-of-linden-falls.webp',alt:'Cover of The Lights of Linden Falls by Mira Lavelle, showing two children beneath a handmade illuminated star in a snowy town square.'},
       link:'books/the-lights-of-linden-falls/index.html',
