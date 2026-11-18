@@ -71,10 +71,11 @@
     },
     {
       slug:'ink-and-inheritance', title:'The Empress of Ink', sub:'Ink & Inheritance · Book One',
-      pen:'Mira Lavelle', world:'mira', genre:'Gothic Romantic Suspense', status:'soon', release:'November 19, 2026', launch:'Coming November 19, 2026',
+      pen:'Mira Lavelle', world:'mira', genre:'Gothic Romantic Suspense', status:'live', release:'November 19, 2026', launch:'Available now',
       hook:'A rare-book empress authenticates a lost library and finds a forgery built for her hands alone — and 1886 letters that seem to know things she has never told anyone.',
       cover:{img:'the-empress-of-ink-cover.jpg'},
       link:'books/the-empress-of-ink/index.html',
+      buy:'https://shop.boompublishingbooks.com/products/the-empress-of-ink?variant=67908196335765',
       amazon:'https://www.amazon.com/dp/B0HP33HVZ2'
     },
     {
@@ -128,6 +129,7 @@
       status:'live',
       buy:'https://shop.boompublishingbooks.com/products/large-print-variety-puzzle-for-seniors?variant=67686402031765',
       amazon:'https://www.amazon.com/dp/B0HM3Q53CH',
+      uk:'https://www.thegreatbritishbookshop.co.uk/collections/family-relationships/products/the-easy-large-print-variety-puzzle-book-for-seniors',
       hook:'100 one-page crosswords, word searches, word games, and brain teasers with complete solutions.',
       cover:{img:'the-easy-large-print-variety-puzzle-book-for-seniors.jpg',alt:'Cover of The Easy Large-Print Variety Puzzle Book for Seniors, 2027 Edition.'},
       link:'books/the-easy-large-print-variety-puzzle-book-for-seniors/index.html'
@@ -137,33 +139,21 @@
       title:'The Easy Large-Print Vacations and Holidays Variety Puzzle Book for Seniors',
       sub:'US English Edition', pen:'Boom Puzzle Books', world:'puzzles',
       genre:'Large-Print Variety Puzzles', format:'puzzle',
-      status:'soon', release:'October 22, 2026', launch:'Coming October 22, 2026',
+      status:'live', release:'October 22, 2026', launch:'Available',
       buy:'https://shop.boompublishingbooks.com/products/vacations-and-holidays-us-edition?variant=67686557483157',
-      amazonSoon:true, amazonSoonLabel:'Buy on Amazon — Coming Soon',
+      amazon:'https://www.amazon.com/dp/B0HM523Q1F',
       hook:'Premium full color. One puzzle per page. Complete solutions included.',
       cover:{img:'vacations-holidays-us-english.jpg',alt:'Cover of The Easy Large-Print Vacations and Holidays Variety Puzzle Book for Seniors, US English Edition.'},
       link:'books/vacations-holidays-us-english/index.html'
-    },
-    {
-      slug:'vacations-holidays-british-english',
-      title:'The Easy Large-Print Vacations and Holidays Variety Puzzle Book for Seniors',
-      sub:'British English Edition', pen:'Boom Puzzle Books', world:'puzzles',
-      genre:'Large-Print Variety Puzzles', format:'puzzle',
-      status:'soon', launch:'Release status to be confirmed',
-      buy:'https://shop.boompublishingbooks.com/products/britishedition?variant=67919382446229',
-      amazonSoon:true, amazonSoonLabel:'Buy on Amazon — Coming Soon',
-      hook:'Premium full colour. One puzzle per page. Complete solutions included.',
-      cover:{img:'vacations-holidays-british-english.jpg',alt:'Cover of The Easy Large-Print Vacations and Holidays Variety Puzzle Book for Seniors, British English Edition.'},
-      link:'books/vacations-holidays-british-english/index.html'
     },
     {
       slug:'vacaciones-celebraciones-spanish',
       title:'El libro de pasatiempos variados en vacaciones y celebraciones en letra grande para mayores',
       sub:'Edición en español', pen:'Boom Puzzle Books', world:'puzzles',
       genre:'Pasatiempos variados en letra grande', format:'puzzle',
-      status:'soon', launch:'Estado de publicación por confirmar',
+      status:'live', launch:'Available',
       buy:'https://shop.boompublishingbooks.com/products/vacaciones-y-celebraciones?variant=67918216757397',
-      amazonSoon:true, amazonSoonLabel:'Comprar en Amazon — Próximamente',
+      amazon:'https://www.amazon.com/dp/B0HP7K68DK',
       hook:'100 actividades a todo color, una actividad por página y todas las respuestas incluidas.',
       cover:{img:'vacaciones-celebraciones-spanish.jpg',alt:'Portada de El libro de pasatiempos variados en vacaciones y celebraciones en letra grande para mayores, edición en español.'},
       link:'books/vacaciones-celebraciones-spanish/index.html'
@@ -212,6 +202,7 @@
     if(b.buy) h+='<a class="book-btn book-btn-primary" href="'+href(b.buy)+'" target="_blank" rel="noopener noreferrer">Buy from Boom Publishing Books</a>';
     if(b.directSoon) h+='<span class="book-btn book-btn-primary is-disabled" aria-disabled="true">'+esc(b.directSoonLabel||'Direct Paperback Coming Soon')+'</span>';
     if(b.amazon) h+='<a class="book-btn" href="'+href(b.amazon)+'" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>';
+    if(b.uk) h+='<a class="book-btn" href="'+href(b.uk)+'" target="_blank" rel="noopener noreferrer">Buy in the UK</a>';
     if(b.amazonSoon) h+='<span class="book-btn is-disabled" aria-disabled="true">'+esc(b.amazonSoonLabel||'Amazon Pre-order Coming Soon')+'</span>';
     if(b.sample) h+='<a class="book-btn" href="'+href(b.sample)+'">'+(b.format==='puzzle'?'View sample puzzles':'Read Chapter One')+'</a>';
     else if(b.status==='live'&&b.format!=='puzzle') h+='<a class="book-btn" href="'+href(b.link)+'">Read Chapter One</a>';
@@ -301,6 +292,7 @@
             +(b.buy?'<a class="btn ghost" href="'+href(b.buy)+'" target="_blank" rel="noopener noreferrer">Buy from Boom Publishing Books</a>':'')
             +(b.directSoon?'<span class="btn primary is-disabled" aria-disabled="true">'+esc(b.directSoonLabel||'Direct Paperback Coming Soon')+'</span>':'')
             +(b.amazon?'<a class="btn ghost" href="'+href(b.amazon)+'" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>':'')
+            +(b.uk?'<a class="btn ghost" href="'+href(b.uk)+'" target="_blank" rel="noopener noreferrer">Buy in the UK</a>':'')
             +(b.amazonSoon?'<span class="btn ghost is-disabled" aria-disabled="true">'+esc(b.amazonSoonLabel||'Amazon Pre-order Coming Soon')+'</span>':'')
             +(b.preview?'<a class="btn ghost" href="'+href(b.preview)+'" target="_blank" rel="noopener noreferrer" aria-label="Read the first three chapters of When I See Through You free">📖 Read the First 3 Chapters FREE</a>':'')
           +'</div>'
